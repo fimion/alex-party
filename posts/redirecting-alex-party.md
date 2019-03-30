@@ -1,6 +1,6 @@
 ---
 title: Redirecting Alex.party
-excerpt: thoughs on moving to a new system.
+excerpt: Thoughts on moving to a new system.
 date: 2019-03-30T13:02:31.249Z
 ---
 I am currently moving [alex.party](https://alex.party) over to the netlify name servers. Soon this will be the new home of my blog! Maybe I can also get some of my other old domains pointing here too.
