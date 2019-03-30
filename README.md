@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/184a6cb7-3572-49ed-9955-c1550bf8faa8/deploy-status)](https://app.netlify.com/sites/alex-party/deploys)
+
 # Default starter for Gridsome
 
 ### 1. Install Gridsome CLI tool if you don't have
