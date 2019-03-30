@@ -4,13 +4,16 @@ backend:
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
+publish_mode: editorial_workflow
 
 collections:
   - name: "posts"
     label: "Posts"
+    label_singular: "Post"
     folder: "posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{year}}/{{month}}/{{day}} - {{title}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Excerpt", name: "excerpt", widget: "string"}
