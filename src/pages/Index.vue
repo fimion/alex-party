@@ -9,12 +9,13 @@
         <div v-html="edge.node.content"></div>
       </div>
     </div>
+    <Pager :info="$page.posts.pageInfo"/>
   </Layout>
 </template>
 
 <page-query>
-  query Posts {
-    posts: allPost(sortBy: "date", order: DESC, perPage: 10) {
+  query Posts($page: Int) {
+    posts: allPost(sortBy: "date", order: DESC, perPage: 10, page: $page) @paginate {
       edges {
         node {
           path
