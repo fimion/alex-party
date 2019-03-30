@@ -1,9 +1,11 @@
 <template>
   <layout :title="$page.post.title">
-    <h2><a :href="$page.post.path">{{ $page.post.title }}</a></h2>
-    <p>{{ $page.post.date }}</p>
-    <p>{{ $page.post.excerpt }}</p>
-    <div v-html="$page.post.content"></div>
+    <div>
+      <h2><g-link :to="$page.post.path">{{ $page.post.title }}</g-link></h2>
+      <p>{{ $page.post.date }}</p>
+      <p>{{ $page.post.excerpt }}</p>
+      <div v-html="$page.post.content"></div>
+    </div>
   </layout>
 </template>
 

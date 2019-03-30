@@ -1,14 +1,14 @@
 <template>
   <Layout>
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <div>
-      <div v-for="edge in $page.posts.edges" :key="edge.node.id">
-        <h2><a :href="edge.node.path">{{ edge.node.title }}</a></h2>
+    <section>
+      <article v-for="edge in $page.posts.edges" :key="edge.node.id">
+        <h2><g-link :to="edge.node.path">{{ edge.node.title }}</g-link></h2>
         <p>{{ edge.node.date}}</p>
         <p>{{edge.node.excerpt}}</p>
         <div v-html="edge.node.content"></div>
-      </div>
-    </div>
+      </article>
+    </section>
     <Pager :info="$page.posts.pageInfo"/>
   </Layout>
 </template>
