@@ -29,7 +29,7 @@ module.exports = {
             // ...local plugins
           ]
         }
-      }
+      },
     },
     {
       use: `gridsome-plugin-netlify-cms`,
@@ -37,5 +37,30 @@ module.exports = {
         publicPath: `/admin`
       }
     },
+    {
+      use: `gridsome-plugin-rss`,
+      options: {
+        contentTypeName: 'Post',
+        feedOptions: {
+          title: 'Alex.Party',
+          feed_url: 'https://alex.party/rss.xml',
+          site_url: 'https://alex.party',
+        },
+        feedItemOptions: node => ({
+          title: node.title,
+          description: node.excerpt,
+          date: node.date,
+          url: 'https://alex.party'+node.path,
+          author: 'Alex Riviere',
+          custom_elements: [{
+            published: new Date(node.date).toUTCString(),
+          }]
+        }),
+        output: {
+          dir: './static',
+          name: 'rss.xml',
+        },
+      }
+    }
   ]
 }
