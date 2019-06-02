@@ -57,6 +57,7 @@ query {
   background-color:#69f;
   color:#fff;
   padding:0 20px;
+  border: 8px ridge #fff;
 }
 
 img{
@@ -79,6 +80,7 @@ img{
     background-color: rgba(255,255,255,0.9);
     padding: 5px 20px;
     border-radius: 10px;
+    border: 8px ridge #69f;
   }
 
 </style>
