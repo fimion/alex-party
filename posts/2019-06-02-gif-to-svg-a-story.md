@@ -9,7 +9,7 @@ The other day someone linked me to [dory-funk.com](http://www.dory-funk.com/) an
 
 ![dory-funk.com](/uploads/dory-funk-com.png)
 
-I opened up the background in a separate tab and watched it. After a bit, I thought to myself, "Couldn't you acheive this with SVG?" and thus began several hours of painstakingly recreating it by hand as an SVG. Animations and all.
+I opened up the background in a separate tab and watched it. After a bit, I thought to myself, "Couldn't you achieve this with SVG?" and thus began several hours of painstakingly recreating it by hand as an SVG. Animations and all.
 
 ![starry night](/uploads/starry-night.svg)
 
