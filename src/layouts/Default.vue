@@ -2,14 +2,14 @@
   <div class="layout">
     <header class="header">
       <h1>
-        <g-link class="nav__link" to="/">{{ $static.metaData.siteName }}</g-link>
+        <g-link class="nav__link home" to="/">{{ $static.metaData.siteName }}</g-link>
       </h1>
       <nav class="nav">
         <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about">About</g-link>
       </nav>
     </header>
-    <main>
+    <main class="content">
       <slot/>
     </main>
   </div>
@@ -24,12 +24,21 @@ query {
 </static-query>
 
 <style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans|Schoolbell&display=swap');
+  html{
+    font-size:16px;
+  }
+  body {
+    font-family: 'Schoolbell', Comic Sans MS, Comic Sans, cursive;
   margin:0;
   padding:0;
+
   line-height: 1.5;
+  background: #000 0 0/200px 200px url("/img/starry-night.svg");
 }
+  .sans-serif{
+    font-family: 'Open Sans', sans-serif;
+  }
 
 .layout {
   max-width: 760px;
@@ -42,11 +51,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
   height: 80px;
   background-color:#69f;
   color:#fff;
-  padding:0 10px;
+  padding:0 20px;
 }
 
 .nav__link {
@@ -54,8 +64,17 @@ body {
   color:#fff;
   text-decoration: none;
 }
+  .nav__link.home{
+    margin-left: 0;
+  }
   .nav__link:hover,.nav__link:visited,.nav__link:active,.nav__link:focus{
     color:#fff;
+  }
+
+  .content{
+    background-color: rgba(255,255,255,0.9);
+    padding: 5px 20px;
+    border-radius: 10px;
   }
 
 </style>

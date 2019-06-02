@@ -2,9 +2,11 @@
   <layout :title="$page.post.title">
     <div>
       <h2><g-link :to="$page.post.path">{{ $page.post.title }}</g-link></h2>
-      <p>{{ $page.post.date }}</p>
-      <p>{{ $page.post.excerpt }}</p>
-      <div v-html="$page.post.content"></div>
+      <div class="sans-serif">
+        <p>{{ $page.post.date }}</p>
+        <p>{{ $page.post.excerpt }}</p>
+        <div v-html="$page.post.content"></div>
+      </div>
     </div>
   </layout>
 </template>
