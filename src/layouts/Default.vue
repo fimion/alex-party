@@ -59,6 +59,10 @@ query {
   padding:0 20px;
 }
 
+img{
+  max-width: 100%;
+}
+
 .nav__link {
   margin-left: 20px;
   color:#fff;
