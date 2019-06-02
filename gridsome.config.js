@@ -48,7 +48,7 @@ module.exports = {
         },
         feedItemOptions: node => ({
           title: node.title,
-          description: node.excerpt,
+          description: `<p><a href="https://alex.party${node.path}">Originally posted at Alex.Party</a></p><p>${node.excerpt}</p>${node.body}`,
           date: node.date,
           url: 'https://alex.party'+node.path,
           author: 'Alex Riviere',
