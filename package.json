@@ -7,11 +7,11 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@gridsome/source-filesystem": "^0.5.0",
-    "@gridsome/transformer-remark": "^0.3.2",
-    "gridsome": "^0.6.3",
-    "gridsome-plugin-netlify-cms": "^1.0.7",
-    "gridsome-plugin-rss": "^1.1.0",
-    "netlify-cms": "^2.9.1"
+    "@gridsome/source-filesystem": "^0.6.2",
+    "@gridsome/transformer-remark": "^0.4.0",
+    "gridsome": "^0.7.12",
+    "gridsome-plugin-netlify-cms": "^1.0.9",
+    "gridsome-plugin-rss": "^1.2.0",
+    "netlify-cms": "^2.10.2"
   }
 }
