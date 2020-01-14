@@ -23,7 +23,6 @@ module.exports = {
       options: {
         path: 'posts/**/*.md',
         typeName: 'Post',
-        route: 'posts/:year-:month-:day-:slug',
         remark: {
           plugins: [
             // ...local plugins
@@ -62,5 +61,8 @@ module.exports = {
         },
       }
     }
-  ]
+  ],
+  templates:{
+    Post:'/posts/:year-:month-:day-:title'
+  }
 }

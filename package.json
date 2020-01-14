@@ -12,6 +12,6 @@
     "gridsome": "^0.7.12",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-rss": "^1.2.0",
-    "netlify-cms": "^2.10.2"
+    "netlify-cms": "^2.10.4"
   }
 }
