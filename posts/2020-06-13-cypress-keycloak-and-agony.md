@@ -40,6 +40,6 @@ As of version 3.8.3 of cypress, it seems like `cy.request` has an odd behavior i
 
 That said, I don't think this is actually a cypress issue (it kind of is, but I don't have a good suggestion for them on how to fix it.) This goes back to keycloak being very secure about things. Which is what we want from our login server. Sadly.
 
-## So how do we fix all of this?
+## How do we fix all of this?
 
 We're going to track our keycloak cookies ourselves. like I said, the previous post got us 90% of the way there. So let's build off of that.
