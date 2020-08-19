@@ -1,7 +1,7 @@
 ---
 title: ES6 Classes, Object Prototypes, and Enumeration
-excerpt: ES6 classes have been around for a little now, so let's talk about a
-  key difference between using them and using a more traditional object
+excerpt: ES6 classes have been around for a little why now, so let's talk about
+  a key difference between using them and using a more traditional object
   prototype extending method of creating JavaScript classes.
 date: 2020-08-19T00:04:41.323Z
 ---
