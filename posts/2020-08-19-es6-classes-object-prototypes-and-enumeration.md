@@ -5,7 +5,7 @@ excerpt: ES6 classes have been around for a little now, so let's talk about a
   prototype extending method of creating JavaScript classes.
 date: 2020-08-19T00:04:41.323Z
 ---
-At work the other day i ran into a bit of code I was trying to test that relied on [@google/markerclustererplus](https://github.com/googlemaps/v3-utility-library/tree/master/packages/markerclustererplus) and google maps. Google has released [@googlemaps/jest-mocks](https://github.com/googlemaps/v3-utility-library/tree/master/packages/jest-mocks) which helps some with the problems i was running into, but they do not appear to be using their own mocks library to test markerclustererplus.
+At work the other day I ran into a bit of code I was trying to test that relied on [@google/markerclustererplus](https://github.com/googlemaps/v3-utility-library/tree/master/packages/markerclustererplus) and google maps. Google has released [@googlemaps/jest-mocks](https://github.com/googlemaps/v3-utility-library/tree/master/packages/jest-mocks) which helps some with the problems I was running into, but they do not appear to be using their own mocks library to test markerclustererplus.
 
 ## The Issue
 
@@ -23,3 +23,28 @@ function extend(type1: any, type2: any): void {
 ```
 
 The error I was encountering was that it couldn't find method that I knew was mocked out. This is where I discovered a difference between using ES6 classes and an binding to the Object prototype. ES6 Classes do not allow their public properties on their prototype be enumerated by default.
+
+## WAT
+
+So let me back up and explain a couple of things first. `Object.defineProperty` allows you to define new properties on an object. When doing this, you can define a few things about the new property: `writable`, `configurable`, and `enumerable`.
+
+```js
+const o = {};
+
+Object.defineProperty(o, 'a', {
+  value: 1,
+  writable: true,
+  configurable: true,
+  enumerable: true
+});
+
+console.log(o.a) // prints: 1
+```
+
+`writable` is whether the value can be reassigned or not. `configurable` is whether you can redefine things about the property. `enumerable` is whether or not you can loop over it or not. (This is an oversimplification and you should definitely [read more about this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty).)
+
+When you define an ES6 class using the `class` keyword, any method you define for the class is defined on its prototype and the `enumerable` property is set to `false`.
+
+## Examples
+
+So what does this mean and how does this relate to my problem? Well, let's talk about some examples of this. 
