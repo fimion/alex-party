@@ -3,15 +3,17 @@
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
     <section>
       <article v-for="edge in $page.posts.edges" :key="edge.node.id">
-        <h2><g-link :to="edge.node.path">{{ edge.node.title }}</g-link></h2>
+        <h2>
+          <g-link :to="edge.node.path">{{ edge.node.title }}</g-link>
+        </h2>
         <div class="sans-serif">
-          <p>{{ edge.node.date}}</p>
+          <p><date-display :datetime="edge.node.date" /></p>
           <p>{{edge.node.excerpt}}</p>
           <div v-html="edge.node.content"></div>
         </div>
       </article>
     </section>
-    <Pager :info="$page.posts.pageInfo"/>
+    <Pager :info="$page.posts.pageInfo" />
   </Layout>
 </template>
 
@@ -33,15 +35,17 @@
 </page-query>
 
 <script>
-  export default {
-    metaInfo: {
-      title: 'Hello, world!',
-    },
-  }
+import DateDisplay from "~/components/DateDisplay.vue"
+export default {
+  metaInfo: {
+    title: "Hello, world!",
+  },
+  components:{DateDisplay},
+};
 </script>
 
 <style>
-  .home-links a {
-    margin-right: 1rem;
-  }
+.home-links a {
+  margin-right: 1rem;
+}
 </style>

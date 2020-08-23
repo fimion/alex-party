@@ -36,6 +36,19 @@ query {
   line-height: 1.5;
   background: #000 0 0/200px 200px url("/img/starry-night.svg");
 }
+
+  @media (prefers-reduced-motion) {
+    body {
+      background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    body {
+      background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");
+    }
+  }
+
   .sans-serif{
     font-family: 'Open Sans', sans-serif;
   }
@@ -64,6 +77,14 @@ img{
   max-width: 100%;
 }
 
+code{
+  background: #eee;
+  color: #2d2d2d;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
 .nav__link {
   margin-left: 20px;
   color:#fff;
@@ -77,7 +98,7 @@ img{
   }
 
   .content{
-    background-color: rgba(255,255,255,0.9);
+    background-color: rgb(255,255,255);
     padding: 5px 20px;
     border-radius: 10px;
     border: 8px ridge #69f;

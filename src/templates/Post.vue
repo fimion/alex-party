@@ -1,13 +1,13 @@
 <template>
   <layout :title="$page.post.title">
-    <div>
+    <article>
       <h2><g-link :to="$page.post.path">{{ $page.post.title }}</g-link></h2>
       <div class="sans-serif">
-        <p>{{ $page.post.date }}</p>
+        <p><date-display :datetime="$page.post.date"/></p>
         <p>{{ $page.post.excerpt }}</p>
         <div v-html="$page.post.content"></div>
       </div>
-    </div>
+    </article>
   </layout>
 </template>
 
@@ -25,9 +25,10 @@
 </page-query>
 <script>
   import Layout from '~/layouts/Default.vue'
+  import DateDisplay from "~/components/DateDisplay.vue"
   export default {
     name: "Post",
-    components:{Layout},
+    components:{Layout, DateDisplay},
     metaInfo () {
       return {
         title: this.$page.post.title
