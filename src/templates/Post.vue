@@ -29,9 +29,6 @@
   export default {
     name: "Post",
     components:{Layout, DateDisplay},
-    methods:{
-
-    },
     metaInfo () {
       return {
         title: this.$page.post.title
