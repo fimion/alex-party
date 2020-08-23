@@ -36,6 +36,19 @@ query {
   line-height: 1.5;
   background: #000 0 0/200px 200px url("/img/starry-night.svg");
 }
+
+  @media (prefers-reduced-motion) {
+    body {
+      background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    body {
+      background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");
+    }
+  }
+
   .sans-serif{
     font-family: 'Open Sans', sans-serif;
   }
