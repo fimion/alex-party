@@ -13,6 +13,7 @@ module.exports = {
       anchorClassName: 'icon icon-link',
       plugins: [
         // ...global plugins
+        '@gridsome/remark-prismjs',
       ]
     }
   },
@@ -26,6 +27,7 @@ module.exports = {
         remark: {
           plugins: [
             // ...local plugins
+            '@gridsome/remark-prismjs',
           ]
         }
       },
