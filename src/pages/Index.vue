@@ -9,7 +9,7 @@
         <div class="sans-serif">
           <p><date-display :datetime="edge.node.date" /></p>
           <p>{{edge.node.excerpt}}</p>
-          <div v-html="edge.node.content"></div>
+          <p><g-link :to="edge.node.path">Read more...</g-link></p>
         </div>
       </article>
     </section>
