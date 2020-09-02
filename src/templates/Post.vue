@@ -7,6 +7,7 @@
         <p>{{ $page.post.excerpt }}</p>
         <div v-html="$page.post.content"></div>
       </div>
+      <div ref="comments"/>
     </article>
   </layout>
 </template>
@@ -31,7 +32,22 @@
     components:{Layout, DateDisplay},
     metaInfo () {
       return {
-        title: this.$page.post.title
+        title: this.$page.post.title,
+      }
+    },
+    mounted(){
+      if(window){
+          const utterances = document.createElement('script');
+          utterances.src="https://utteranc.es/client.js";
+          utterances.setAttribute('repo',"fimion/alex-party");
+          utterances.setAttribute("issue-term","pathname");
+          utterances.setAttribute("label","comments");
+          utterances.setAttribute("theme","github-light");
+          utterances.setAttribute("crossorigin","anonymous");
+          utterances.setAttribute("async","async");
+          this.$nextTick(()=>{
+            this.$refs.comments.append(utterances);
+          })
       }
     }
   }
