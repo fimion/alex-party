@@ -27,7 +27,6 @@
 <script>
   import Layout from '~/layouts/Default.vue'
   import DateDisplay from "~/components/DateDisplay.vue"
-  const UTTERANCES = `<script src=  issue-term="pathname" label="comments" theme="github-light" crossorigin="anonymous"><\/script>`;
   export default {
     name: "Post",
     components:{Layout, DateDisplay},
