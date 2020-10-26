@@ -7,6 +7,8 @@ I've just finished upgrading [vue-solitaire](https://vue-solitaire.netlify.app) 
 
 ### Vue Solitaire
 
+As some background, [Vue Solitaire](https://github.com/fimion/vue-solitaire) is my pet project I made to demo a few concepts for others struggling with challenges similar to situations I've been in. Most notably it is 5 separate vue apps communicating with each other via a Vuex store. There are 4 areas (Deck, Flop, Play, and Final) that cards can appear. Each of these Areas is an individual Vue App and the Vue apps move cards around by moving them around Vuex modules. While this seems silly, it's a useful exmple that can be translated into other things. For instance, If we want a "Buy Now!" button that is a vue app and a "Cart Icon" that is also a vue app, we can make these as separate instances on the page, but use Vuex to maintain the state of the cart that both reference. 
+
 ### Adding Global Components
 
 ### Mounting an App
