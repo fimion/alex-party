@@ -4,10 +4,10 @@ date: 2020-10-27T14:44:33.508Z
 excerpt: I upgraded an app to Vue 3 and I learned some things about it.
 ---
 I've just finished upgrading [vue-solitaire](https://vue-solitaire.netlify.app) to use Vue 3. There are 3 main things I learned in this process that I wanted to let you (dear reader) know about. 
- 
- - First, the way you add global components has changed a little. 
- - Next, the way apps mount has both syntactically changed, as well as how it ends up in the DOM has changed. 
- - Finally, Vue 3 has a new way of code-splitting and loading components asynchronously but throws a very unhelpful error: `Invalid VNode type: undefined`. 
+
+* First, the way you add global components has changed a little. 
+* Next, the way apps mount has both syntactically changed, as well as how it ends up in the DOM has changed. 
+* Finally, Vue 3 has a new way of code-splitting and loading components asynchronously but throws a very unhelpful error: `Invalid VNode type: undefined`. 
 
 ### Vue Solitaire
 
@@ -47,18 +47,35 @@ In this codebase, I have multiple applications. Rather than manually applying mu
 
 ```javascript
 import { createApp } from 'vue';
-import MyComponent from './MyComponent.vue';
-import App from './App.vue';
 
-function addGlobalComponent(app) {
+// our Global components
+import MyComponent from './MyComponent.vue';
+// ... imagine 6 or 7 of these
+
+// our applications
+import PlayArea from './PlayArea.vue';
+import DeckArea from './DeckArea.vue';
+import FlopArea from './FlopArea.vue';
+import FinalArea from './FinalArea.vue';
+
+
+function addGlobalComponents(app) {
     app.component('my-component', MyComponent);
+    // Imagine 6 or 7 components being added here
 }
 
-const myApp = createApp(App);
+const apps = {
+  '#play': PlayArea,
+  '#deck': DeckArea,
+  '#flop': FlopArea,
+  '#final': FinalArea,
+};
 
-addGlobalComponent(myApp);
-
-myApp.mount('#app');
+for(const el in apps) {
+  const app = createApp(apps[el]);
+  addGlobalComponents(app);
+  app.mount(el);
+}
 ```
 
 This pattern allows us to apply components to multiple Vue app instances and also allows us to define our global components in a separate file if we would like. If you are applying a global set of components, I highly recommend this pattern.
