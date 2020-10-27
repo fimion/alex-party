@@ -23,7 +23,23 @@ Vue.component('my-component', MyComponent);
 const myApp = new Vue(App).$mount('#app');
 ```
 
-Well, In Vue 3, you no longer bind things to the global `Vue` object. Instead, we need to apply it to our Vue app instance. So now, in this codebase, the better pattern to use is to make a function that applies the component to our app instance.
+Well, In Vue 3, you no longer bind things to the global `Vue` object. Instead, we need to apply it to our Vue app instance. This will feel very familiar however.
+
+```javascript
+import { createApp } from 'vue';
+import MyComponent from './MyComponent.vue';
+import App from './App.vue';
+
+const myApp = createApp(App);
+
+myApp.component('my-component', MyComponent);
+
+myApp.mount('#app');
+```
+
+The same thing applies to pugins, directives, and mixins. Anything you want to apply globally to a Vue application now needs to be applied to the application instance and not the global Vue Object.
+
+In this codebase, I have multiple applications. Rather than manually applying multiple global components to each application, the better pattern to use is to make a function that applies the component to our app instance.
 
 ```javascript
 import { createApp } from 'vue';
