@@ -37,7 +37,7 @@ myApp.component('my-component', MyComponent);
 myApp.mount('#app');
 ```
 
-The same thing applies to pugins, directives, and mixins. Anything you want to apply globally to a Vue application now needs to be applied to the application instance and not the global Vue Object.
+The same thing applies to pugins, directives, and mixins. Anything you want to apply globally to a Vue application now needs to be applied to the application instance and not the global `Vue` object.
 
 In this codebase, I have multiple applications. Rather than manually applying multiple global components to each application, the better pattern to use is to make a function that applies the component to our app instance.
 
