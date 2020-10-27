@@ -97,4 +97,6 @@ We now have an extra div wrapping things! Fortunately with Vue 3, we can have mu
 </script>
 ```
 
+This will now render the way we expect it to. I have not done enough exploring to find out what is needed to be able to modify the element that you have mounted to, and that is outside the scope of this post.  Maybe I'll look into it in another post.
+
 ### Code Splitting
