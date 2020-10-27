@@ -159,7 +159,7 @@ const FinalArea = ()=>import("@components/FinalArea.vue");
 const PlayArea = ()=>import("@components/PlayArea.vue");
 ```
 
-This was the problematic code that was throwing the extremely vague error. Vue will no longer render a function that returns a promise to a component without some help due to how the underlying system works. You now need to pass this function to a helper function from vue first:
+This was the problematic code that was throwing the extremely vague error. Vue will no longer render a function that returns a promise to a component without some help due to how the underlying system works. (I've gone ahead and filed an issue [here](https://github.com/vuejs/vue-next/issues/2497) to make the message a bit more helpful.) You now need to pass this function to a helper function from vue first:
 
 ```javascript
 import {defineAsyncComponent} from "vue";
@@ -174,4 +174,4 @@ const PlayApp = defineAsyncComponent(()=>import("@components/PlayArea.vue"))
 
 ### Conclusion
 
-Updating vue-solitaire from Vue 2 to Vue 3 surprisingly only took me a couple of hours. I had been ready to dedicate half a day or more to updating this small application, and was pleasantly surprised at how easy it was to do.
+Updating vue-solitaire from Vue 2 to Vue 3 surprisingly only took me a couple of hours. I had been ready to dedicate half a day or more to updating this small application, and was pleasantly surprised at how easy it was to do. There were a few more things I knew I was going to run into and quickly fixed, but these were the 3 that caught me off guard. I hope this helps someone else!
