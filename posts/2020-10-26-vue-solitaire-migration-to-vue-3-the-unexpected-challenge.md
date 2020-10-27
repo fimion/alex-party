@@ -42,7 +42,7 @@ const myApp = createApp(App);
 
 addGlobalComponent(myApp);
 
-app.mount('#app');
+myApp.mount('#app');
 ```
 
 This pattern allows us to apply components to multiple Vue app instances and also allows us to define our global components in a separate file if we would like. If you are applying a global set of components, I highly recommend this pattern.
@@ -131,10 +131,10 @@ This was the problematic code that was throwing the extremely vague error. Vue w
 ```javascript
 import {defineAsyncComponent} from "vue";
 
-const DeckApp = defineAsyncComponent('DeckApp', ()=>import("@components/DeckArea.vue"))
-const FlopApp = defineAsyncComponent("FlopApp",()=>import("@components/FlopArea.vue"))
-const FinalApp = defineAsyncComponent("FinalApp", ()=>import("@components/FinalArea.vue"))
-const PlayApp = defineAsyncComponent("PlayApp",()=>import("@components/PlayArea.vue"))
+const DeckApp = defineAsyncComponent(()=>import("@components/DeckArea.vue"))
+const FlopApp = defineAsyncComponent(()=>import("@components/FlopArea.vue"))
+const FinalApp = defineAsyncComponent(()=>import("@components/FinalArea.vue"))
+const PlayApp = defineAsyncComponent(()=>import("@components/PlayArea.vue"))
 ```
 
 `defineAsyncComponent` wraps our function call in an object that has some extra helpers to handle loading and error states, and once I figured this out, then everything worked exactly as I was expecting it to!
