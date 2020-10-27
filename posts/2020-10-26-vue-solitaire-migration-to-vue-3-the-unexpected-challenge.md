@@ -3,6 +3,10 @@ title: Vue-Solitaire Migration to Vue 3 - The unexpected challenge
 date: 2020-10-26T14:41:36.880Z
 excerpt: I upgraded an app to Vue 3 and I learned some things about it.
 ---
+
+
+
+
 I've just finished upgrading [vue-solitaire](https://vue-solitaire.netlify.app) to use Vue 3. There are 3 main things I learned in this process that I wanted to let you (dear reader) know about. First, the way you add global components has changed a little. Next, the way apps mount has both syntactically changed, as well as how it ends up in the DOM has changed. Finally, Vue 3 has a new way of code-splitting and loading components asynchronously. 
 
 ### Vue Solitaire
@@ -100,3 +104,41 @@ We now have an extra div wrapping things! Fortunately with Vue 3, we can have mu
 This will now render the way we expect it to. I have not done enough exploring to find out what is needed to be able to modify the element that you have mounted to, and that is outside the scope of this post.  Maybe I'll look into it in another post.
 
 ### Code Splitting
+
+The last major hurdle I had to overcome was the least helpful error I've run into.
+
+```
+[Vue warn]: Invalid VNode type: undefined (undefined)
+```
+
+This error message is excessively unhelpful and If I had not been aware of some changes between Vue 2 and Vue 3, I likely would have given up with this endeavor. Fortunately, I was aware of this this bit of information:
+
+From [Async Components:](https://v3.vuejs.org/guide/migration/async-components.html#introduction)
+
+> Now, in Vue 3, since functional components are defined as pure functions, async components definitions need to be explicitly defined by wrapping it in a new `defineAsyncComponent` helper
+
+What does this mean for us? Let's look at how I had previously code split my solitaire game:
+
+```javascript
+const DeckArea = ()=>import("@components/DeckArea.vue");
+const FlopArea = ()=>import("@components/FlopArea.vue");
+const FinalArea = ()=>import("@components/FinalArea.vue");
+const PlayArea = ()=>import("@components/PlayArea.vue");
+```
+
+This was the problematic code that was throwing the extremely vague error. Vue will no longer render a function that returns a promise to a component without some help due to how the underlying system works. You now need to pass this function to a helper function from vue first:
+
+```javascript
+import {defineAsyncComponent} from "vue";
+
+const DeckApp = defineAsyncComponent('DeckApp', ()=>import("@components/DeckArea.vue"))
+const FlopApp = defineAsyncComponent("FlopApp",()=>import("@components/FlopArea.vue"))
+const FinalApp = defineAsyncComponent("FinalApp", ()=>import("@components/FinalArea.vue"))
+const PlayApp = defineAsyncComponent("PlayApp",()=>import("@components/PlayArea.vue"))
+```
+
+`defineAsyncComponent` wraps our function call in an object that has some extra helpers to handle loading and error states, and once I figured this out, then everything worked exactly as I was expecting it to!
+
+### Conclusion
+
+Updating vue-solitaire from Vue 2 to Vue 3 surprisingly only took me a couple of hours. I had been ready to dedicate half a day or more to updating this small application, and was pleasantly surprised at how easy it was to do.
