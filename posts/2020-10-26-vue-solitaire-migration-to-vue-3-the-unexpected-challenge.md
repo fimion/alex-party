@@ -13,7 +13,7 @@ As some background, [Vue Solitaire](https://github.com/fimion/vue-solitaire) is 
 
 In Vue 2, the syntax to add a component globally to Vue, we would write code like this:
 
-```js
+```javascript
 import Vue from 'vue';
 import MyComponent from './MyComponent.vue';
 import App from './App.vue';
@@ -25,7 +25,7 @@ const myApp = new Vue(App).$mount('#app');
 
 Well, In Vue 3, you no longer bind things to the global `Vue` object. Instead, we need to apply it to our Vue app instance. So now, in this codebase, the better pattern to use is to make a function that applies the component to our app instance.
 
-```js
+```javascript
 import { createApp } from 'vue';
 import MyComponent from './MyComponent.vue';
 import App from './App.vue';
