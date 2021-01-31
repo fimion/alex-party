@@ -7,18 +7,18 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@gridsome/remark-prismjs": "^0.4.0",
+    "@gridsome/remark-prismjs": "^0.5.0",
     "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.6.1",
-    "gridsome": "^0.7.20",
+    "@gridsome/transformer-remark": "^0.6.4",
+    "gridsome": "^0.7.23",
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-rss": "^1.2.0",
-    "netlify-cms": "^2.10.55",
-    "prismjs": "^1.21.0",
-    "css-loader": "^4.2.1",
+    "netlify-cms": "^2.10.84",
+    "prismjs": "^1.23.0",
+    "css-loader": "^5.0.1",
     "svg-inline-loader": "^0.8.2",
-    "markdown-it": "^11.0.0",
-    "@iktakahiro/markdown-it-katex": "^4.0.0",
+    "markdown-it": "^12.0.4",
+    "@iktakahiro/markdown-it-katex": "^4.0.1",
     "htm": "^3.0.4"
   }
 }
