@@ -7,4 +7,4 @@ excerpt: Every once in a while, you find a feature of JavaScript you never knew
 ---
 I have previously read about and experimented with labels on for loops in JavaScript and after seeing [Brendan Eich tweet about it](https://twitter.com/BrendanEich/status/1376912996748783616), I decided to experiment on if statements as well. I threw together a little [demo codepen](https://codepen.io/fimion/pen/NWddamo) and thought about why we don't use this style of syntax.
 
-In a way, JavaScript labels are a call back to BASIC programming and the GOTO command. Well, sort of. More
+In a way, JavaScript labels are a callback to BASIC programming and the GOTO command. Well, sort of. More
