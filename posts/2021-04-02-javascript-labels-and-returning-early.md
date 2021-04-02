@@ -11,15 +11,8 @@ In a way, JavaScript labels are a callback to older languages and the GOTO comma
 
 The ideal use case for a label is typically with a nested loop or conditional.
 
-```javascript
-outer: // this defines the label "outer"
-for(var x = 0; x < 10; x++){ // this for loop now has a label of "outer"
-  for(var y = 0; y < 10; y++){ // this loop does not have a label
-    console.log(x,y);
-    // we can break the inner loop early
-    if(y === 5) break;
-    // and thanks to the label, we can also break the outer loop early
-    if(x === 5) break outer;
-  }
-}
-```
+
+<iframe height="300" style="width: 100%;" scrolling="no" title="Using a Label in a nested for loop" src="https://codepen.io/fimion/embed/WNRpaaK?height=300&theme-id=33229&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/fimion/pen/WNRpaaK'>Using a Label in a nested for loop</a> by Alex Riviere
+  (<a href='https://codepen.io/fimion'>@fimion</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
