@@ -2,8 +2,8 @@
 title: JavaScript Labels and Returning Early
 date: 2021-04-02T13:00:00.000Z
 excerpt: Every once in a while, you find a feature of JavaScript you never knew
-  about that has always been there. Labels are one of those odd vestigial
-  bits of the language that make you go "But why?"
+  about that has always been there. Labels are one of those odd vestigial bits
+  of the language that make you go "But why?"
 ---
 I have previously read about and experimented with labels on for loops in JavaScript and after seeing [Brendan Eich tweet about it](https://twitter.com/BrendanEich/status/1376912996748783616), I decided to experiment on if statements as well. I threw together a little [demo codepen](https://codepen.io/fimion/pen/NWddamo) and thought about why we don't use this style of syntax.
 
@@ -34,7 +34,7 @@ label: {
 
 ### Returning Early
 
-I mentioned earlier that the label pattern typically isn't seen in use because there are other ways of achieving the same code. A good example of this is to use functions to have the same outcome. This also allows the resulting code to be more testable and portable.
+I mentioned earlier that the label pattern typically isn't seen in use because there are other ways of achieving the same functionality. A good example of this is to use functions to have the same outcome. This also allows the resulting code to be more testable and portable.
 
 <iframe height="403" style="width: 100%;" scrolling="no" title="Returning early from a nested for loop" src="https://codepen.io/fimion/embed/gOgmQzQ?height=403&theme-id=39521&default-tab=js,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href='https://codepen.io/fimion/pen/gOgmQzQ'>Returning early from a nested for loop</a> by Alex Riviere
