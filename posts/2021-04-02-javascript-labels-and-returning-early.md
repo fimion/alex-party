@@ -1,8 +1,9 @@
 ---
 title: JavaScript Labels and returning early
 date: 2021-04-02T13:00:00.000Z
-excerpt: Brendan Eich recently tweeted about labels in JavaScript. I decided to
-  play with it.
+excerpt: "[Brendan Eich recently
+  tweeted](https://twitter.com/BrendanEich/status/1376912996748783616) about
+  labels in JavaScript. I decided to play with it."
 ---
 I have previously experimented with labels on for loops and after seeing the tweet in question I decided to experiment on if statements as well. I threw together a little [demo codepen](https://codepen.io/fimion/pen/NWddamo) and thought about why we don't use this style of syntax.
 
