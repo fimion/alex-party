@@ -41,6 +41,6 @@ I mentioned earlier that the label pattern typically isn't seen in use because t
   (<a href='https://codepen.io/fimion'>@fimion</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-In the above code we've broken the logic for both loops out into their own functions. The `outerLoop` function will call whatever callback we give it and the `innerLoop` function receives the value of `x` as an argument. We then call `outerLoop(innerLoop); to kick off the whole thing. Both loops can escape early by returning before the loop is completed.
+In the above code we've broken the logic for both loops out into their own functions. The `outerLoop` function will call whatever callback we give it and the `innerLoop` function receives the value of `x` as an argument. We then call `outerLoop(innerLoop);` to kick off the whole thing. Both loops can escape early by returning before the loop is completed.
 
 Code being broken into smaller pieces like this is why you do not see as much use of JavaScript labels. I love labels and the power they have, but I don't know that I'd want them in my code.
