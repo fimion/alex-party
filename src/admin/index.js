@@ -36,6 +36,7 @@ const PostPreview = window.createClass({
         const excerptRendered = customMarkdownIt.render(excerpt||'');
         const body =  entry.getIn(['data', 'body']);
         const bodyRendered = customMarkdownIt.render(body||'');
+        document.body.classList.add('admin');
         return html`<div class="layout">
                       <header className="header">
                         <h1>
