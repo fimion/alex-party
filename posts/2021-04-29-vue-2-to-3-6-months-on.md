@@ -1,5 +1,5 @@
 ---
-title: Vue 2 to 3 - 6 months on
+title: Vue 2 to Vue 3 - 8 months on
 date: 2021-04-29T20:04:49.863Z
 excerpt: Vue 3 has been out for almost 8 months now. Adoption is slow. This is
   feeling a little like another major version bump i've lived through. is Vue
