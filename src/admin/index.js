@@ -36,8 +36,8 @@ const PostPreview = window.createClass({
         const excerptRendered = customMarkdownIt.render(excerpt||'');
         const body =  entry.getIn(['data', 'body']);
         const bodyRendered = customMarkdownIt.render(body||'');
-        document.body.classList.add('admin');
         return html`<div class="layout">
+                      
                       <header className="header">
                         <h1>
                           <a href="#" className="nav__link home" >Alex.Party</a>
@@ -62,7 +62,7 @@ const PostPreview = window.createClass({
                     </div>`;
       }
     });
-CMS.registerPreviewStyle(styles.toString(), { raw: true });
+CMS.registerPreviewStyle(styles.toString()+`\nbody {background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");}`, { raw: true });
 CMS.registerPreviewStyle(prismStyles.toString(), {raw:true});
 CMS.registerPreviewTemplate("posts", PostPreview);
 
