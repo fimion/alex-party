@@ -61,6 +61,10 @@ code{
   padding-right: 2px;
 }
 
+code[class*=language-], pre[class*=language-]{
+  font-family: 'Comic Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
 .nav__link {
   margin-left: 20px;
   color:#fff;
