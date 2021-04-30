@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Schoolbell&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css');
+
 html{
   font-size:16px;
 }
@@ -54,9 +56,13 @@ img{
 code{
   background: #eee;
   color: #2d2d2d;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: 'Comic Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   padding-left: 2px;
   padding-right: 2px;
+}
+
+code[class*=language-], pre[class*=language-]{
+  font-family: 'Comic Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
 .nav__link {
