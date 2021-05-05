@@ -1,8 +1,12 @@
 ---
 title: Vue 2 to Vue 3 - 8 months on
-date: 2021-04-29T20:04:49.863Z
+date: 2021-05-05T21:31:45.094Z
 excerpt: Vue 3 has been out for almost 8 months now. Adoption is slow. This is
   feeling a little like another major version bump I've lived through. Is Vue
   the new python?
 ---
-When I started developing this go around, I was getting into python and I was confused about python 2 vs python 3 and what i should be using. This was back in 2015, and the support for python 3 was very low.
+Vue 3 has been out for almost 8 months now. Adoption is slow. This is feeling a little like another major version bump I've lived through. Is Vue the new python?
+
+When I started developing this go around, I was getting into python and I was confused about python 2 vs python 3 and what i should be using. This was back in 2015, and the support for python 3 was very low. Similarly, Vue 3 has been released for 8 months now and it is still considered the `@next` version. Articles and talks all point to using Vue 3, but to a new user, everything still points to Vue 2. This creates confusion and bad messaging.
+
+Recently, [Vue.js announced that version 3.1 would be a migration build](https://twitter.com/vuejs/status/1388144585600274433) to help people move from version 2 to version 3. Realistically, the move from version 2 to 3 will take more than just a migration build. The ecosystem has not really caught up, and Evan has been spending most of his development time on Vite.
