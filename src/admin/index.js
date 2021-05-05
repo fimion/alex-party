@@ -32,8 +32,6 @@ const PostPreview = window.createClass({
         const entry = this.props.entry;
         const title = entry.getIn(['data', 'title']);
         const date = entry.getIn(['data', 'date']);
-        const excerpt = entry.getIn(['data', 'excerpt']);
-        const excerptRendered = customMarkdownIt.render(excerpt||'');
         const body =  entry.getIn(['data', 'body']);
         const bodyRendered = customMarkdownIt.render(body||'');
         return html`<div class="layout">
@@ -52,8 +50,7 @@ const PostPreview = window.createClass({
                           <article>
                             <h2><a href="#">${title}</a></h2>
                             <div className="sans-serif">
-                              <p>${date.toLocaleString()}</p>
-                              <p dangerouslySetInnerHTML="${{__html:excerptRendered}}"></p>
+                              <p>${date ? date.toLocaleString() : (new Date()).toLocaleString()}</p>
                               <div dangerouslySetInnerHTML="${{__html:bodyRendered}}"></div>
                             </div>
                           </article>

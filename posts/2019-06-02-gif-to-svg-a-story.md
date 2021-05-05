@@ -1,10 +1,10 @@
 ---
 title: Gif to SVG - A Story
-excerpt: >-
-  I recently have updated the styling of my site to have a bit more....
-  character?
 date: 2019-06-02T12:54:54.264Z
 ---
+
+I recently have updated the styling of my site to have a bit more.... character?
+
 The other day someone linked me to [dory-funk.com](http://www.dory-funk.com/) and I was immediately mesmerized by the background. It reminded me of my early days of the internet and messing around with HTML at that time.
 
 ![dory-funk.com](/uploads/dory-funk-com.png)

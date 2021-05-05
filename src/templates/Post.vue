@@ -4,7 +4,6 @@
       <h2><g-link :to="$page.post.path">{{ $page.post.title }}</g-link></h2>
       <div class="sans-serif">
         <p><date-display :datetime="$page.post.date"/></p>
-        <p>{{ $page.post.excerpt }}</p>
         <div v-html="$page.post.content"></div>
       </div>
       <div ref="comments"/>
@@ -19,7 +18,6 @@
       title
       id
       date
-      excerpt
       content
     }
   }

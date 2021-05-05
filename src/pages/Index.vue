@@ -8,8 +8,8 @@
         </h2>
         <div class="sans-serif">
           <p><date-display :datetime="edge.node.date" /></p>
-          <p>{{edge.node.excerpt}}</p>
-          <p><g-link :to="edge.node.path">Read more...</g-link></p>
+          <div v-html="splitExcerpt(edge.node.content)"></div>
+          <p><g-link :to="edge.node.path">Continue reading "{{ edge.node.title }}"</g-link></p>
         </div>
       </article>
     </section>
@@ -26,7 +26,6 @@
           id
           title
           date
-          excerpt
           content
         }
       }
@@ -38,9 +37,17 @@
 import DateDisplay from "~/components/DateDisplay.vue"
 export default {
   metaInfo: {
-    title: "Hello, world!",
+    title: "Alex.party",
   },
   components:{DateDisplay},
+  methods:{
+    splitExcerpt(content){
+      if(content.includes(`<!-- break -->`)){
+          return content.split(`<!-- break -->`)[0];
+      }
+      return content.match(/^\<p\>(.*)\<\/p\>/)[0];
+    }
+  },
 };
 </script>
 
