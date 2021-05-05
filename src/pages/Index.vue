@@ -42,7 +42,6 @@ export default {
   components:{DateDisplay},
   methods:{
     splitExcerpt(content){
-      console.log(content.includes(`<!-- break -->`), content.split(`<!-- break -->`), content.match(/^\<p\>(.*)\<\/p\>/))
       if(content.includes(`<!-- break -->`)){
           return content.split(`<!-- break -->`)[0];
       }
