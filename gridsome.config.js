@@ -85,7 +85,7 @@ module.exports = {
           // console.log(node)
           return {
             title: node.title,
-            description: `${node.content}\n\n*Originally Posted as [{node.title}](https://alex.party${node.path}) at alex.party*\n`,
+            description: `${node.content}\n\n*Originally Posted as [${node.title}](https://alex.party${node.path}) at alex.party*\n`,
             date: node.date,
             url: 'https://alex.party'+node.path,
             author: 'Alex Riviere',
