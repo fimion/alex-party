@@ -53,10 +53,8 @@ module.exports = {
           site_url: 'https://alex.party',
         },
         feedItemOptions: node => {
-          // console.log(node)
           const transformer = new RemarkTransformer(remark,{});
           const transformedContent = transformer.processor.stringify(transformer.processor.parse(node.content));
-          console.log(transformedContent);
           return {
             title: node.title,
             description: `${transformedContent}\n<p>Originally Posted as <a href="https://alex.party${node.path}">${node.title}</a> at alex.party</p>`,
