@@ -1,10 +1,9 @@
 ---
 title: ES6 Classes, Object Prototypes, and Enumeration
-excerpt: ES6 classes have been around for a little while now, so let's talk
-  about a key difference between using them and using a more traditional object
-  prototype extending method of creating JavaScript classes.
 date: 2020-08-19T00:04:41.323Z
 ---
+ES6 classes have been around for a little while now, so let's talk about a key difference between using them and using a more traditional object prototype extending method of creating JavaScript classes.
+
 At work the other day I ran into a bit of code I was trying to test that relied on [@google/markerclustererplus](https://github.com/googlemaps/v3-utility-library/tree/master/packages/markerclustererplus) and google maps. Google has released [@googlemaps/jest-mocks](https://github.com/googlemaps/v3-utility-library/tree/master/packages/jest-mocks) which helps some with the problems I was running into, but they do not appear to be using their own mocks library to test markerclustererplus.
 
 ## The Issue
