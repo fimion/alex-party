@@ -37,7 +37,7 @@
 import DateDisplay from "~/components/DateDisplay.vue"
 export default {
   metaInfo: {
-    title: "Hello, world!",
+    title: "Alex.party",
   },
   components:{DateDisplay},
   methods:{
