@@ -76,4 +76,22 @@ Excellent! Problem fixed. Well, kind of.
 
 This actually gives us a new problem that the function runs on MY dime every time someone comes to the site. while there is a free tier of Netlify Functions, I'd rather not become a victim of internet popularity. Fortunately, Netlify has recently release "On Demand Builders" which allows you to  generate server side rendered pages on-demand when first requested and then use a cached value for every subsequent call. This means, I could run this function once and then it would use that version of the output every single time afterwards.
 
-## Version 3: Let's Get Caching!
+### Version 3: Let's Get Caching!
+
+Netlify On-Demand builders will cache the value a serverless function returns and then bust the value on the next build. 
+
+"Alex," I hear you start to say, "Surely this is extremely complicated and will take a lot of code to make this happen!"
+
+Nope. Make sure you have run in the root of your project `npm install @netlify/functions` and then you can add this little bit of code:
+
+```javascript
+ const {builder} = require("@netlify/functions");
+
+// ... all the code we had before
+
+ exports.handler = builder(async function (){
+    // ... this is the same as the previous example
+});
+```
+
+Now our function caches every build. I've added a github action to trigger a build every 12 hours, which will bust the cache and fetch new results. But that's it. It's pretty easy!
