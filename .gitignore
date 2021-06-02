@@ -8,3 +8,4 @@ dist
 .env.*
 .idea/
 static/rss.xml
+static/markdown-rss.xml
