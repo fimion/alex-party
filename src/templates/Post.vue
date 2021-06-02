@@ -35,8 +35,9 @@
         meta:[
           {name:"image",content:this.previewImg},
           {property:"og:type", content:"article"},
-          {property:"og:url", content: `https://alex.party`},
-          {property:"og:description", content:this.$page.post.title},
+          {property:"og:url", content: `https://alex.party${this.$page.post.path}`},
+          {property:"og:title", content:this.$page.post.title},
+          {property:"og:description", content:this.$page.post.date},
           {property:"og:image", content:this.previewImg},
           {name:"twitter:dnt", content:"on"},
           {name:"twitter:card", content:"summary_large_image"},
