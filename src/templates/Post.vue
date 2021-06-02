@@ -1,7 +1,6 @@
 <template>
   <layout :title="$page.post.title">
     <article>
-      <img :src="previewImg" :alt="$page.post.title" />
       <h2><g-link :to="$page.post.path">{{ $page.post.title }}</g-link></h2>
       <div class="sans-serif">
         <p><date-display :datetime="$page.post.date"/></p>
