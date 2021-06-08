@@ -7,6 +7,7 @@
       <nav class="nav">
         <g-link class="nav__link" to="/">Home</g-link>
         <g-link class="nav__link" to="/about">About</g-link>
+        <a class="nav__link" href="/rss.xml">RSS</a>
       </nav>
     </header>
     <main class="content">
@@ -22,5 +23,19 @@ query {
   }
 }
 </static-query>
+
+<script>
+export default {
+  name: 'DefaultLayout',
+  metaInfo(){
+    return {
+      link:[
+        {rel:"alternate", type:"application/rss+xml", title:"RSS Feed for alex.party", href:"/rss.xml"},
+      ]
+    }
+  }
+};
+</script>
+
 
 <style src="~/style/default.css"></style>
