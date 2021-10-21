@@ -17,7 +17,7 @@ The story of the week in my news feed is surrounding Netflix and the new Dave Ch
 * [Terra Field - "It Was Never About Dave"](https://rainofterra.com/it-was-never-about-dave-9aee8b765978)
 * [NYT - "Netflix workers plan a walkout as the fallout over Dave Chappelle continues."](https://www.nytimes.com/2021/10/19/business/media/netflix-dave-chappelle-employee-walkout.html)
 
-I have yet to watch the Chappelle special, but I will be so that I can speak from an informed place about it.
+I'm writing about this specifically because a friend called me and asked for perspective about it. He is a Black man who is older than I and he asked me to watch the special so we could have a discussion about it. I have yet to watch it, but I will so that I can speak with him from an informed place.
 
 ### [Alpha Paintlet](https://daverupert.com/2021/10/alpha-paintlet/)
 
