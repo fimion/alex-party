@@ -6,11 +6,11 @@ Look, let's be honest. You aren't really here for some earth shattering informat
 
 As long as you are here though, I should write up some interesting links that I've found over the past few days that caught my attention.
 
-## [Building The SSG I’ve Always Wanted: An 11ty, Vite And JAM Sandwich](https://www.smashingmagazine.com/2021/10/building-ssg-11ty-vite-jam-sandwich/)
+### [Building The SSG I’ve Always Wanted: An 11ty, Vite And JAM Sandwich](https://www.smashingmagazine.com/2021/10/building-ssg-11ty-vite-jam-sandwich/)
 
 Ben Holmes has an amazing write up of his time over the last almost 2 years of his adventures in making his own static site generator setup. It's a great read, and honestly is so much fun.
 
-## Netflix Can do Better
+### Netflix Can do Better
 
 The story of the week in my news feed is surrounding Netflix and the new Dave Chappelle special. I have even had a very long phone call with a friend about this. Rather than attempt to pontificate, I'll link to the 2 articles I have read from the people who are living this story:
 
@@ -19,7 +19,7 @@ The story of the week in my news feed is surrounding Netflix and the new Dave Ch
 
 I have yet to watch the Chappelle special, but I will be so that I can speak from an informed place about it.
 
-## [Alpha Paintlet](https://daverupert.com/2021/10/alpha-paintlet/)
+### [Alpha Paintlet](https://daverupert.com/2021/10/alpha-paintlet/)
 
 Dave Rupert talks about using houdini to make custom CSS properties with more magic. I love new web technology and the unlimited terrible things you can do with it.
 
