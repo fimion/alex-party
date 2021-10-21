@@ -1,5 +1,5 @@
 <template>
-  <layout :title="$page.post.title">
+  <layout>
     <article>
       <h2><g-link :to="$page.post.path">{{ $page.post.title }}</g-link></h2>
       <div class="sans-serif">
