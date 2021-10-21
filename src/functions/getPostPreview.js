@@ -4,37 +4,14 @@ export default function generateSocialImage({
     cloudinaryUrlBase = 'https://res.cloudinary.com',
     version = "v1622614411",
     cloudName = "fimion",
-    titleFont = 'schoolbell.ttf',
-    titleExtraConfig = '',
-    imageWidth = 1280,
-    imageHeight = 669,
-    textAreaWidth = 1050,
-    textLeftOffset = 75,
-    titleTopOffset = 225,
-    textColor = '000000',
-    titleFontSize = 72,
     }){
+    const cleanTitle = title.replace(/,/g,'');
     // configure social media image dimensions, quality, and format
-    const imageConfig = [
-    `w_${imageWidth}`,
-    `h_${imageHeight}`,
-    'c_fill',
-    'q_auto',
-    'f_auto',
-    ].join(',');
   
     // configure the title text
-    const titleConfig = [
-    `w_${textAreaWidth}`,
-    'c_fit',
-    `co_rgb:${textColor}`,
-    'g_north_west',
-    `x_${textLeftOffset}`,
-    `y_${titleTopOffset}`,
-    `l_text:${titleFont}_${titleFontSize}${titleExtraConfig}:${encodeURIComponent(
-    title,
-    )}`,
-    ].join(',');
+    const titleConfig = `$title_!${encodeURIComponent(cleanTitle)}!`;
+
+    const imageConfig = `t_alex-party-social-card`;
   
     // combine all the pieces required to generate a Cloudinary URL
     const urlParts = [
@@ -42,8 +19,8 @@ export default function generateSocialImage({
     cloudName,
     'image',
     'upload',
-    imageConfig,
     titleConfig,
+    imageConfig,
     version,
     imagePublicID,
     ];
