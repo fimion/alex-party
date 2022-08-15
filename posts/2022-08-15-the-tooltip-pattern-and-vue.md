@@ -6,3 +6,4 @@ I recently found myself helping someone who wanted to make a tooltip component i
 
 ### A Tooltip Component
 
+Now I want to state this here, before we begin, ***this article does not cover how to make a fully accessible tooltip.***
