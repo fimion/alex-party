@@ -1,5 +1,6 @@
 import CMS from "netlify-cms"
 import styles from '!css-loader?url=false!../style/default.css';
+import comicMono from '!css-loader?url=false!@fontsource/comic-mono';
 import prismStyles from '!css-loader!prismjs/themes/prism-tomorrow.css';
 import htm from 'htm';
 
@@ -59,7 +60,7 @@ const PostPreview = window.createClass({
                     </div>`;
       }
     });
-CMS.registerPreviewStyle(styles.toString()+`\nbody {background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");}`, { raw: true });
+CMS.registerPreviewStyle(comicMono.toString()+styles.toString()+`\nbody {background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");}`, { raw: true });
 CMS.registerPreviewStyle(prismStyles.toString(), {raw:true});
 CMS.registerPreviewTemplate("posts", PostPreview);
 
