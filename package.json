@@ -17,7 +17,7 @@
     "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-plugin-rss": "^1.2.0",
     "htm": "^3.0.4",
-    "markdown-it": "^12.0.6",
+    "markdown-it": "^12.3.2",
     "netlify-cms": "^2.10.118",
     "prismjs": "^1.23.0",
     "svg-inline-loader": "^0.8.2"
