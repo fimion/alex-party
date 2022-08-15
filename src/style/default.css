@@ -1,11 +1,129 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Schoolbell&display=swap');
+@font-face {
+  font-family: 'Comic Neue';
+  src: local('Comic Neue Light'), local('ComicNeue-Light'),
+    url('/fonts/comic-neue/ComicNeue-Light.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeue-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: local('Comic Neue Italic'), local('ComicNeue-Italic'),
+    url('/fonts/comic-neue/ComicNeue-Italic.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeue-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: local('Comic Neue Bold'), local('ComicNeue-Bold'),
+    url('/fonts/comic-neue/ComicNeue-Bold.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeue-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: local('Comic Neue Bold Italic'), local('ComicNeue-BoldItalic'),
+    url('/fonts/comic-neue/ComicNeue-BoldItalic.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeue-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: local('Comic Neue Light Italic'), local('ComicNeue-LightItalic'),
+    url('/fonts/comic-neue/ComicNeue-LightItalic.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeue-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue';
+  src: local('Comic Neue Regular'), local('ComicNeue-Regular'),
+    url('/fonts/comic-neue/ComicNeue-Regular.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeue-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: local('Comic Neue Angular Bold'), local('ComicNeueAngular-Bold'),
+    url('/fonts/comic-neue/ComicNeueAngular-Bold.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeueAngular-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: local('Comic Neue Angular Italic'), local('ComicNeueAngular-Italic'),
+    url('/fonts/comic-neue/ComicNeueAngular-Italic.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeueAngular-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: local('Comic Neue Angular Bold Italic'), local('ComicNeueAngular-BoldItalic'),
+    url('/fonts/comic-neue/ComicNeueAngular-BoldItalic.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeueAngular-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: local('Comic Neue Angular Light Italic'), local('ComicNeueAngular-LightItalic'),
+    url('/fonts/comic-neue/ComicNeueAngular-LightItalic.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeueAngular-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: local('Comic Neue Angular Regular'), local('ComicNeueAngular-Regular'),
+    url('/fonts/comic-neue/ComicNeueAngular-Regular.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeueAngular-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Comic Neue Angular';
+  src: local('Comic Neue Angular Light'), local('ComicNeueAngular-Light'),
+    url('/fonts/comic-neue/ComicNeueAngular-Light.woff2') format('woff2'),
+    url('/fonts/comic-neue/ComicNeueAngular-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 @import url('https://cdn.jsdelivr.net/npm/comic-mono@0.0.1/index.css');
 
 html{
   font-size:16px;
 }
 body {
-  font-family: 'Schoolbell', Comic Sans MS, Comic Sans, cursive;
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
   margin:0;
   padding:0;
 
@@ -26,7 +144,7 @@ body {
 }
 
 .sans-serif{
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Comic Neue Angular', sans-serif;
 }
 
 .layout {

@@ -978,6 +978,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@fontsource/comic-mono@^4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/comic-mono/-/comic-mono-4.5.3.tgz#74be41d04fe5a828e510f0b45b3236fbb31ffc14"
+  integrity sha512-5sQvhqC7zFNwsozVRePHEli1Cy+fDVjeFp3xMmWrNs7uwy6FMkxCdWFnDDoPLvUl3whGaGsywa/FcQMDrcy4+Q==
+
 "@gridsome/cli@^0.3.4":
   version "0.3.4"
   resolved "https://registry.yarnpkg.com/@gridsome/cli/-/cli-0.3.4.tgz#42fa7a4368a80bd04ec497c93cae5a66b041fe22"
