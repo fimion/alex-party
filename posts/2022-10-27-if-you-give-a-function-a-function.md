@@ -10,12 +10,15 @@ This got me thinking about a thing that it literally took me YEARS to understand
 
 ## T﻿he thing about functions...
 
-S﻿o the thing I never learned is that a function isn't some magic thing. **Most languages allow you to pass functions around. As arguments. To other functions.** This may seem obvious to others, but seriously, I did not understand this concept. Because I didn't understand this, GUI programming was impossible. JavaScript event handling was not understandable. Certain parts of WordPress were incomprehensible.\
-\
-I﻿ remember trying to learn to use PyGTK, and never being able to do much with it.\
-\
-O﻿ne day though, I think I was reading some JavaScript code at my first professional programming job, and I suddenly realized you could pass a function as an argument. **SO MANY THINGS CLICKED FOR ME.**  All at once, the ability to use a bunch of libraries that I could not understand before became open to me and it completely revolutionized how i think about things.\
-\
+S﻿o the thing I never learned is that a function isn't some magic thing. **Most languages allow you to pass functions around. As arguments. To other functions.** This may seem obvious to others, but seriously, I did not understand this concept. Because I didn't understand this, GUI programming was impossible. JavaScript event handling was not understandable. Certain parts of WordPress were incomprehensible.
+
+
+I﻿ remember trying to learn to use PyGTK, and never being able to do much with it.
+
+
+O﻿ne day though, I think I was reading some JavaScript code at my first professional programming job, and I suddenly realized you could pass a function as an argument. **SO MANY THINGS CLICKED FOR ME.**  All at once, the ability to use a bunch of libraries that I could not understand before became open to me and it completely revolutionized how i think about things.
+
+
 S﻿o, for all you new to development, understand this: **You can pass a function as an argument to another function.**
 
 T﻿hank you.
