@@ -16,4 +16,12 @@ T﻿hese tests are mostly Unit tests for the internal code of your code base. On
 
 #﻿# Consumer Interface Tests
 
-﻿A Consumer is anyone who will be using your product as potentially a developer, or maybe an application, that is outside of the people developing it. A good example of this would be a public REST or GraphQL API that is used by outside developers. (maybe if you are a back-end developer, the consumer is your front-end team!)
+﻿A Consumer is anyone who will be using your product as potentially a developer, or maybe an application, that is outside of the people developing it. A good example of this would be a public REST or GraphQL API that is used by outside developers. (maybe if you are a back-end developer, the consumer is your front-end team!) It can also be someone who is using your published library. This is still in a way a technical interface test. This is where you get more integration tests as well as unit tests depending on the situation. If you say your REST API will return a JSON object, gosh darn, make sure it does!
+
+#﻿# User Interface Tests
+
+User tests are often thought of as being only E2E tests, but I disagree. A User test is testing how a user (generally non technical, but sometimes not depending on what you make) will interact with a thing. E2E tests are very helpful here. but also, if you can atomically do unit tests on an interface, do it! same for integration tests. if you click a button and you want to make sure it displays data from an API, maybe you don't need the full app to check that functionality. that can be an integration test! User tests are a touch more fluid in my mind than most people make them out to be. 
+
+#﻿# That's enough
+
+H﻿opefully this might help you think about how you approach your tests and maybe next time you don't know how to write a test for a thing, you'll ask yourself "Who am I writing this test for?"
