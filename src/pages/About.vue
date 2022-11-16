@@ -9,8 +9,8 @@
         <ul>
           <li>I help organize the <a href="https://www.meetup.com/Atlanta-Vue-js-Meetup/">Atlanta Vue.js Meetup</a></li>
           <li>I also help organize <a href="https://www.meetup.com/python-atlanta/">PyATL</a></li>
-          <li>I'm a regular panelist on
-            <a href="https://enjoythevue.io">Enjoy the Vue</a> as of January 2021.
+          <li>I was regular panelist on
+            <a href="https://enjoythevue.io">Enjoy the Vue</a>.
           </li>
           <li>My personal playground is over at <a href="https://icannot.design">iCannot.design.</a></li>
           <li><a href="/uploads/Alex-Riviere-Resume-2021.01.25.pdf">Here is my resume.</a></li>
