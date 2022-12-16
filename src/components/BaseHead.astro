@@ -1,0 +1,43 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import '../styles/global.css';
+import 'prismjs/themes/prism-tomorrow.css';
+import splitExcerpt from "../functions/splitExcerpt.js";
+import generateSocialImage from "../functions/generateSocialImage.js";
+
+export interface Props {
+	title: string;
+	description: string;
+
+}
+
+const { title, description } = Astro.props;
+const excerpt = splitExcerpt(description, true);
+const image = new URL(generateSocialImage({title}), Astro.url)
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={excerpt} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={excerpt} />
+<meta property="og:image" content={image} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={excerpt} />f
+<meta property="twitter:image" content={image} />

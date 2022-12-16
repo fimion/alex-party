@@ -1,0 +1,26 @@
+{
+  "name": "alex-party",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.12.2",
+    "@astrojs/rss": "^1.2.1",
+    "@astrojs/sitemap": "^1.0.0",
+    "@astrojs/vue": "^1.2.2",
+    "@staticcms/core": "^1.0.0-beta4",
+    "astro": "^1.6.15",
+    "htm": "^3.1.1",
+    "markdown-it": "^13.0.1",
+    "prismjs": "^1.29.0",
+    "sanitize-html": "^2.8.0",
+    "vue": "^3.2.45"
+  }
+}

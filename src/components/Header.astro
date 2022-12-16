@@ -1,0 +1,27 @@
+---
+import HeaderLink from "./HeaderLink.astro";
+import { SITE_TITLE } from "../config";
+---
+
+<header class="header">
+  <h1>
+    <a class="nav__link home" href="/">{SITE_TITLE}</a>
+  </h1>
+  <nav class="nav">
+    <a class="nav__link" href="/">Home</a>
+    <a class="nav__link" href="/about">About</a>
+    <a class="nav__link" href="/rss.xml">RSS</a>
+    <a href="https://notacult.social/@fimion" rel="me" class="nav__link"
+      >Mastodon</a
+    >
+    <a class="nav__link" href="https://twitch.tv/fimion">Twitch</a>
+  </nav>
+</header>
+<style>
+  header {
+    margin: 0em 0 2em;
+  }
+  h2 {
+    margin: 0.5em 0;
+  }
+</style>

@@ -1,0 +1,226 @@
+@font-face {
+	font-family: 'Comic Neue';
+	src: local('Comic Neue Light'), local('ComicNeue-Light'),
+		url('/fonts/comic-neue/ComicNeue-Light.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeue-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue';
+	src: local('Comic Neue Italic'), local('ComicNeue-Italic'),
+		url('/fonts/comic-neue/ComicNeue-Italic.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeue-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue';
+	src: local('Comic Neue Bold'), local('ComicNeue-Bold'),
+		url('/fonts/comic-neue/ComicNeue-Bold.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeue-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue';
+	src: local('Comic Neue Bold Italic'), local('ComicNeue-BoldItalic'),
+		url('/fonts/comic-neue/ComicNeue-BoldItalic.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeue-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue';
+	src: local('Comic Neue Light Italic'), local('ComicNeue-LightItalic'),
+		url('/fonts/comic-neue/ComicNeue-LightItalic.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeue-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue';
+	src: local('Comic Neue Regular'), local('ComicNeue-Regular'),
+		url('/fonts/comic-neue/ComicNeue-Regular.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeue-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue Angular';
+	src: local('Comic Neue Angular Bold'), local('ComicNeueAngular-Bold'),
+		url('/fonts/comic-neue/ComicNeueAngular-Bold.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeueAngular-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue Angular';
+	src: local('Comic Neue Angular Italic'), local('ComicNeueAngular-Italic'),
+		url('/fonts/comic-neue/ComicNeueAngular-Italic.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeueAngular-Italic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue Angular';
+	src: local('Comic Neue Angular Bold Italic'), local('ComicNeueAngular-BoldItalic'),
+		url('/fonts/comic-neue/ComicNeueAngular-BoldItalic.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeueAngular-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue Angular';
+	src: local('Comic Neue Angular Light Italic'), local('ComicNeueAngular-LightItalic'),
+		url('/fonts/comic-neue/ComicNeueAngular-LightItalic.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeueAngular-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue Angular';
+	src: local('Comic Neue Angular Regular'), local('ComicNeueAngular-Regular'),
+		url('/fonts/comic-neue/ComicNeueAngular-Regular.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeueAngular-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Neue Angular';
+	src: local('Comic Neue Angular Light'), local('ComicNeueAngular-Light'),
+		url('/fonts/comic-neue/ComicNeueAngular-Light.woff2') format('woff2'),
+		url('/fonts/comic-neue/ComicNeueAngular-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Comic Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url('/fonts/comic-mono/comic-mono-latin-400-normal.woff2') format('woff2'),
+	url('/fonts/comic-mono/comic-mono-latin-400-normal.woff') format('woff');
+}
+@font-face {
+	font-family: 'Comic Mono';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url('/fonts/comic-mono/comic-mono-latin-700-normal.woff2') format('woff2'),
+	url('/fonts/comic-mono/comic-mono-latin-700-normal.woff') format('woff');
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
+	margin: 0;
+	padding: 0;
+
+	line-height: 1.5;
+	background: #000 0 0/200px 200px url("/img/starry-night.svg");
+}
+
+@media (prefers-reduced-motion) {
+	body {
+		background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");
+	}
+}
+
+.sans-serif {
+	font-family: 'Comic Neue Angular', sans-serif;
+}
+
+.layout {
+	max-width: 760px;
+	margin: 0 auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.header,.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+	border-radius: 10px;
+	height: 80px;
+	background-color: #69f;
+	color: #fff;
+	padding: 0 20px;
+	border: 8px ridge #fff;
+}
+
+img {
+	max-width: 100%;
+}
+
+code {
+	background: #eee;
+	color: #2d2d2d;
+	font-family: 'Comic Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+code[class*=language-],
+pre[class*=language-] {
+	font-family: 'Comic Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.nav__link {
+	margin-left: 20px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.nav__link.home {
+	margin-left: 0;
+}
+
+.nav__link:hover,
+.nav__link:visited,
+.nav__link:active,
+.nav__link:focus {
+	color: #fff;
+}
+
+.content {
+	background-color: rgb(255, 255, 255);
+	padding: 5px 20px;
+	border-radius: 10px;
+	border: 8px ridge #69f;
+}
