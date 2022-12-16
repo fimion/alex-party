@@ -2,6 +2,7 @@
 title: First post
 layout: ../../layouts/BlogPost.astro
 pubDate: 2019-03-30T02:29:42.649Z
+draft: true
 ---
 Hello world!
 
