@@ -1,4 +1,5 @@
 ---
+layout: '../../layouts/BlogPost.astro'
 title: Hellooooo Astro!
 pubDate: 2022-12-16T00:51:14.640-05:00
 draft: true
