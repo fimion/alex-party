@@ -32,7 +32,7 @@ const config = {
       fields:[
           {label: "Title", name: "title", widget: "string"},
           {label: "Publish Date", name: "pubDate", widget: "datetime"},
-          {label: "Publish?", name: "draft", widget: "boolean"},
+          {label: "Draft", name: "draft", widget: "boolean", default: true},
           {label: "Body", name: "body", widget: "markdown"},
           ]
     }
