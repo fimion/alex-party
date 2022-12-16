@@ -1,15 +1,45 @@
-import CMS from "netlify-cms"
-import styles from '!css-loader?url=false!../style/default.css';
-import comicMono from '!css-loader?url=false!@fontsource/comic-mono';
-import prismStyles from '!css-loader!prismjs/themes/prism-tomorrow.css';
+import CMS from "@staticcms/core"
+import styles from '../styles/global.css';
+import prismStyles from 'prismjs/themes/prism-tomorrow.css';
 import htm from 'htm';
 
 const html = htm.bind(h);
 
 
 import markdownIt from "markdown-it";
-import markdownItKatex from "@iktakahiro/markdown-it-katex";
 import Prism from "prismjs";
+
+const config = {
+  backend: {
+    name: 'github',
+    repo: 'fimion/alex-party'
+  },
+  media_folder: "public/uploads",
+  public_folder: "/uploads",
+  site_url: "https://alex.party",
+  display_url: "https://alex.party",
+  collections:[
+    {
+      name: "posts",
+      label: "Posts",
+      label_singular: "Post",
+      folder: "posts",
+      create: true,
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+      summary: "{{year}}/{{month}}/{{day}} - {{title}}",
+      sortableFields: ['date'],
+      fields:[
+          {label: "Title", name: "title", widget: "string"},
+          {label: "Publish Date", name: "pubDate", widget: "datetime"},
+          {label: "Publish?", name: "draft", widget: "boolean"},
+          {label: "Body", name: "body", widget: "markdown"},
+          ]
+    }
+  ]
+}
+
+CMS.init({config})
+
 
 // customize markdown-it
 const options = {
@@ -60,7 +90,7 @@ const PostPreview = window.createClass({
                     </div>`;
       }
     });
-CMS.registerPreviewStyle(comicMono.toString()+styles.toString()+`\nbody {background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");}`, { raw: true });
+CMS.registerPreviewStyle(styles.toString()+`\nbody {background: #000 0 0/200px 200px url("/img/memphis-design.svg");}`, { raw: true });
 CMS.registerPreviewStyle(prismStyles.toString(), {raw:true});
 CMS.registerPreviewTemplate("posts", PostPreview);
 

@@ -1,0 +1,47 @@
+---
+import DefaultLayout from './DefaultLayout.astro';
+import DateDisplay from "../components/DateDisplay.vue"
+
+
+export interface Props {
+  url: string;
+	content: {
+		title: string;
+		pubDate?: string;
+		updatedDate?: string;
+	};
+}
+
+const {
+	content: { title, pubDate, updatedDate },
+url, compiledContent
+} = Astro.props;
+---
+
+<DefaultLayout title={title} description={compiledContent()}>
+      <section>
+			<article>
+        <h2><a href={url}>{ title }</a></h2>
+				{pubDate && <DateDisplay datetime={pubDate}/>}
+				{
+					updatedDate && (
+						<div>
+							Last updated on <DateDisplay datetime={updatedDate} />
+						</div>
+					)
+				}
+        <div class="sans-serif">
+				<slot />
+        </div>
+			</article>
+        <div class="sans-serif">
+          <script is:inline
+                  src="https://utteranc.es/client.js"
+                  repo="fimion/alex-party"
+                  issue-term="pathname"
+                  label="comments"
+                  theme="github-light"
+                  crossorigin="anonymous" async="async"></script>
+        </div>
+      </section>
+</DefaultLayout>
