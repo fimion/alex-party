@@ -28,8 +28,19 @@ const config = {
       create: true,
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
       summary: "{{year}}/{{month}}/{{day}} - {{title}}",
-      sortableFields: ['pubDate'],
+      sortable_fields: {
+        fields:['pubDate'],
+        default:{
+          field: 'pubDate',
+          direction: 'Descending'
+        }
+      },
       fields:[
+        {name: 'layout',
+          label: 'Layout',
+          widget: 'hidden',
+          default: '../../layouts/BlogPost.astro',
+        },
           {label: "Title", name: "title", widget: "string"},
           {label: "Publish Date", name: "pubDate", widget: "datetime"},
           {label: "Draft", name: "draft", widget: "boolean", default: true},

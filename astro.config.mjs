@@ -9,7 +9,8 @@ import vue from "@astrojs/vue";
 export default defineConfig({
   site: "https://alex.party",
   markdown:{
-    syntaxHighlight:'prism'
+    syntaxHighlight:'prism',
+    drafts: true,
   },
   integrations: [mdx(), sitemap(), vue()],
 });
