@@ -11,6 +11,10 @@ export interface Props {
 	description: string;
 
 }
+const publicPath = '../../public';
+const comicNeue = import.meta.glob('../../public/fonts/comic-neue/*.woff2');
+const comicMono = import.meta.glob('../../public/fonts/comic-mono/*.woff2');
+const fonts = [...Object.keys(comicNeue),...Object.keys(comicMono)].map(e=>e.replace('../../public',''));
 
 const { title, description } = Astro.props;
 const excerpt = splitExcerpt(description, true);
@@ -22,6 +26,9 @@ const image = new URL(generateSocialImage({title}), Astro.url)
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Preload Fonts -->
+{fonts.map(e=>(<link rel="preload" href={e} as="font" type="font/woff2" />))}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
