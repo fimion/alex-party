@@ -1,7 +1,7 @@
 ---
 title: Added RSS Feed
 layout: ../../layouts/BlogPost.astro
-pubDate: 2019-04-01T14:38:28.878Z
+pubDate: 2019-04-01T14:38:28.878-00:00
 ---
 Huzzah for feed readers!
 

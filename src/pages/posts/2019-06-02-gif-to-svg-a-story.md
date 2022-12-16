@@ -1,7 +1,7 @@
 ---
 title: Gif to SVG - A Story
 layout: ../../layouts/BlogPost.astro
-pubDate:  2019-06-02T12:54:54.264Z
+pubDate:  2019-06-02T12:54:54.264-00:00
 ---
 
 I recently have updated the styling of my site to have a bit more.... character?

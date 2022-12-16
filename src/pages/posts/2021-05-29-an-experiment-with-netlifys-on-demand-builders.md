@@ -1,7 +1,7 @@
 ---
 title: "CSS-Trickz: An Experiment with Netlify's On-Demand Builders"
 layout: ../../layouts/BlogPost.astro
-pubDate: 2021-05-31T03:35:35.027Z
+pubDate: 2021-05-31T03:35:35.027-00:00
 ---
 At the behest of [Dave Rupert](https://daverupert.com/) in the [Shop Talk Show D-D-D-Discord](https://www.patreon.com/shoptalkshow), I'm going to talk about my adventures in making an efficient and poorly designed typo-squatting knock-off of [CSS-Tricks.com](https://css-tricks.com) called [CSS-Trickz.com](https://css-trickz.com), which turned into an experiment in how to make a cached and auto building site on Netlify, using their new [On-Demand Builders](https://docs.netlify.com/configure-builds/on-demand-builders/).
 

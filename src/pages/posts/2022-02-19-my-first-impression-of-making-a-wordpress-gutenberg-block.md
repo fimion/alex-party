@@ -1,7 +1,7 @@
 ---
 title: My first impression of making a Wordpress Gutenberg block
 layout: ../../layouts/BlogPost.astro
-pubDate: 2022-02-19T16:23:44.195Z
+pubDate: 2022-02-19T16:23:44.195-00:00
 ---
 This  week I had the opportunity to make a Gutenberg block and there are a few things I learned in The process.
 

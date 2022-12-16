@@ -1,7 +1,7 @@
 ---
 title: My first thoughts on React
 layout: ../../layouts/BlogPost.astro
-pubDate:  2020-10-11T01:28:14.892Z
+pubDate:  2020-10-11T01:28:14.892-00:00
 ---
 I'm diving into react, coming from vue, and I have some thoughts.
 

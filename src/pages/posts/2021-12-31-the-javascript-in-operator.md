@@ -1,7 +1,7 @@
 ---
 title: The JavaScript `in` Operator
 layout: ../../layouts/BlogPost.astro
-pubDate: 2021-12-31T13:19:24.921Z
+pubDate: 2021-12-31T13:19:24.921-00:00
 ---
 I found out that the JavaScript `in` operator is more versatile than I thought while on stream a couple of weeks ago, so let's write a post about it so I can explain it to myself later.
 

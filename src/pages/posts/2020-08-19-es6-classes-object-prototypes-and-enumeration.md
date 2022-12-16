@@ -1,7 +1,7 @@
 ---
 title: ES6 Classes, Object Prototypes, and Enumeration
 layout: ../../layouts/BlogPost.astro
-pubDate:  2020-08-19T00:04:41.323Z
+pubDate:  2020-08-19T00:04:41.323-00:00
 ---
 ES6 classes have been around for a little while now, so let's talk about a key difference between using them and using a more traditional object prototype extending method of creating JavaScript classes.
 

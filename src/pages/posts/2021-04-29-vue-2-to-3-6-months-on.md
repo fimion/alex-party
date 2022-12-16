@@ -1,7 +1,7 @@
 ---
 title: Vue 2 to Vue 3 - 8 months on
 layout: ../../layouts/BlogPost.astro
-pubDate: 2021-05-05T21:31:45.094Z
+pubDate: 2021-05-05T21:31:45.094-00:00
 excerpt: Vue 3 has been out for almost 8 months now. Adoption is slow. This is
   feeling a little like another major version bump I've lived through. Is Vue
   the new python?

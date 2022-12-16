@@ -1,7 +1,7 @@
 ---
 title: 'New Talk: Why Vue.js?'
 layout: ../../layouts/BlogPost.astro
-pubDate:  2019-04-11T14:15:33.813Z
+pubDate:  2019-04-11T14:15:33.813-00:00
 ---
 My first pass at a talk that is an intro to Vue.js and how you can use it without a build step.
 

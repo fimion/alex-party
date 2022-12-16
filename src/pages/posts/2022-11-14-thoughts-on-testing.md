@@ -1,7 +1,7 @@
 ---
 title: Thoughts on testing
 layout: ../../layouts/BlogPost.astro
-pubDate: 2022-11-14T14:33:12.758Z
+pubDate: 2022-11-14T14:33:12.758-00:00
 ---
 Chris Coiyer had an [interesting post](https://chriscoyier.net/2022/11/11/the-difference-between-integration-testing-and-end-to-end-testing/) on integration vs end to end testing. I made a reply that I want to kinda dig into a little bit.
 

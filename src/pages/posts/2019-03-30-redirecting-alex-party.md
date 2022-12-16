@@ -1,7 +1,7 @@
 ---
 title: Redirecting Alex.party
 layout: ../../layouts/BlogPost.astro
-pubDate: 2019-03-30T13:02:31.249Z
+pubDate: 2019-03-30T13:02:31.249-00:00
 ---
 Thoughts on moving to a new system.
 

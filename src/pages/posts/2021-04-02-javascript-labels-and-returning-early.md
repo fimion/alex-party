@@ -1,7 +1,7 @@
 ---
 title: JavaScript Labels and Returning Early
 layout: ../../layouts/BlogPost.astro
-pubDate: 2021-04-02T13:00:00.000Z
+pubDate: 2021-04-02T13:00:00.000-00:00
 ---
 Every once in a while, you find a feature of JavaScript you never knew about that has always been there. Labels are one of those odd vestigial bits of the language that make you go "But why?"
 

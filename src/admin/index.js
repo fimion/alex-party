@@ -27,7 +27,7 @@ const config = {
       folder: "src/pages/posts",
       create: true,
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
-      summary: "{{year}}/{{month}}/{{day}} - {{title}}",
+      summary: "{{pubDate}} - {{title}}",
       sortable_fields: {
         fields:['pubDate'],
         default:{

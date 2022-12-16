@@ -1,7 +1,7 @@
 ---
 title: Connect.Tech 2019 Talk - Dependency Injection in Vue.js
 layout: ../../layouts/BlogPost.astro
-pubDate:  2020-01-14T00:52:02.603Z
+pubDate:  2020-01-14T00:52:02.603-00:00
 ---
 I had the pleasure of giving my talk "Dependency Injection in Vue.js" at Connect.Tech 2019. Here's where you can see more about it.
 

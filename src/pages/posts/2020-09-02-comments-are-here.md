@@ -1,7 +1,7 @@
 ---
 title: Comments are here!
 layout: ../../layouts/BlogPost.astro
-pubDate:  2020-09-02T23:15:52.868Z
+pubDate:  2020-09-02T23:15:52.868-00:00
 ---
 I have now added comments to my site.
 

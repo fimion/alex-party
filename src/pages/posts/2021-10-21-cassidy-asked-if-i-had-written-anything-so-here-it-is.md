@@ -1,7 +1,7 @@
 ---
 title: Cassidy asked if I had written anything, so here it is
 layout: ../../layouts/BlogPost.astro
-pubDate: 2021-10-20T23:40:35.199Z
+pubDate: 2021-10-20T23:40:35.199-00:00
 ---
 Look, let's be honest. You aren't really here for some earth shattering information. You saw a very clickbaity title that I made to troll [Cassidy Williams](https://cassidoo.co) and quite honestly, I don't think she was ACTUALLY expecting this.
 

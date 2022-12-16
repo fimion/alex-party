@@ -1,7 +1,7 @@
 ---
 title: If You Give a Function a Function...
 layout: ../../layouts/BlogPost.astro
-pubDate: 2022-10-27T16:05:13.866Z
+pubDate: 2022-10-27T16:05:13.866-00:00
 ---
 S﻿o Cassie Evans tweeted this the other day:
 

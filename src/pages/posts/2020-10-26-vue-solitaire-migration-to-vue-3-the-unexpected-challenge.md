@@ -1,7 +1,7 @@
 ---
 title: Vue-Solitaire Migration to Vue 3 - The unexpected challenge
 layout: ../../layouts/BlogPost.astro
-pubDate:  2020-10-27T21:37:09.362Z
+pubDate:  2020-10-27T21:37:09.362-00:00
 ---
 I upgraded an app to Vue 3 and I learned some things about it.
 

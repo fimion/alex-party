@@ -1,7 +1,7 @@
 ---
 title: Mechanical Keyboards - I get it now
 layout: ../../layouts/BlogPost.astro
-pubDate: 2022-06-22T16:03:33.239Z
+pubDate: 2022-06-22T16:03:33.239-00:00
 ---
 So a couple of months ago I purchased 2 of ["The Key v2"](https://drop.com/buy/stack-overflow-the-key-v2-macropad) as an impulse purchase. I got a link to it a couple of minutes before the link went out to everyone, and so I pulled a Phillip J. Fry.
 

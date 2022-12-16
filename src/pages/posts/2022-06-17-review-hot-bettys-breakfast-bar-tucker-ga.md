@@ -1,7 +1,7 @@
 ---
 title: Review - Hot Betty's Breakfast Bar - Tucker, GA
 layout: ../../layouts/BlogPost.astro
-pubDate: 2022-06-17T13:43:48.136Z
+pubDate: 2022-06-17T13:43:48.136-00:00
 ---
 Yesterday we went to [Hot Betty's Breakfast Bar](https://www.hotbettystucker.com/) for lunch and I figured I'd write down some thoughts.
 
