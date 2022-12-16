@@ -90,7 +90,7 @@ const PostPreview = window.createClass({
                     </div>`;
       }
     });
-CMS.registerPreviewStyle(styles.toString()+`\nbody {background: #000 0 0/200px 200px url("/img/starry-night-noanim.svg");}`, { raw: true });
+CMS.registerPreviewStyle(styles.toString()+`\nbody {background: #000 0 0/200px 200px url("/img/memphis-design.svg");}`, { raw: true });
 CMS.registerPreviewStyle(prismStyles.toString(), {raw:true});
 CMS.registerPreviewTemplate("posts", PostPreview);
 
