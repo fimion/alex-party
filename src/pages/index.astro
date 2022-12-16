@@ -6,7 +6,7 @@ const posts = (await Astro.glob("./posts/*.{md,mdx}")).sort(
   (a, b) =>
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
-);
+).filter((post) => !post.frontmatter.draft);
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
