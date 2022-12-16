@@ -1,6 +1,6 @@
 import CMS from "@staticcms/core"
-import styles from '../styles/global.css';
-import prismStyles from 'prismjs/themes/prism-tomorrow.css';
+import styles from '../styles/global.css?raw';
+import prismStyles from 'prismjs/themes/prism-tomorrow.css?raw';
 import htm from 'htm';
 
 const html = htm.bind(h);
