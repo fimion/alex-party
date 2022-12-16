@@ -23,11 +23,11 @@ const config = {
       name: "posts",
       label: "Posts",
       label_singular: "Post",
-      folder: "posts",
+      folder: "src/pages/posts",
       create: true,
       slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
       summary: "{{year}}/{{month}}/{{day}} - {{title}}",
-      sortableFields: ['date'],
+      sortableFields: ['pubDate'],
       fields:[
           {label: "Title", name: "title", widget: "string"},
           {label: "Publish Date", name: "pubDate", widget: "datetime"},
