@@ -28,7 +28,7 @@ const image = new URL(generateSocialImage({title}), Astro.url)
 <meta name="generator" content={Astro.generator} />
 
 <!-- Preload Fonts -->
-{fonts.map(e=>(<link rel="preload" href={e} as="font" type="font/woff2" />))}
+{fonts.map(e=>(<link rel="preload" href={e} as="font" type="font/woff2" crossorigin />))}
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>
