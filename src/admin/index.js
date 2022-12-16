@@ -1,5 +1,5 @@
 import CMS from "@staticcms/core"
-import styles from '../styles/global.css?raw';
+/*import styles from '../styles/global.css?raw';
 import prismStyles from 'prismjs/themes/prism-tomorrow.css?raw';
 import htm from 'htm';
 
@@ -7,7 +7,7 @@ const html = htm.bind(h);
 
 
 import markdownIt from "markdown-it";
-import Prism from "prismjs";
+import Prism from "prismjs";*/
 
 const config = {
   backend: {
@@ -42,7 +42,7 @@ const config = {
 CMS.init({config})
 
 
-// customize markdown-it
+/*// customize markdown-it
 const options = {
   html: true,
   typographer: true,
@@ -67,7 +67,7 @@ const PostPreview = window.createClass({
         const body =  entry.getIn(['data', 'body']);
         const bodyRendered = customMarkdownIt.render(body||'');
         return html`<div class="layout">
-                      
+
                       <header className="header">
                         <h1>
                           <a href="#" className="nav__link home" >Alex.Party</a>
@@ -93,6 +93,6 @@ const PostPreview = window.createClass({
     });
 CMS.registerPreviewStyle(styles.toString()+`\nbody {background: #000 0 0/200px 200px url("/img/memphis-design.svg");}`, { raw: true });
 CMS.registerPreviewStyle(prismStyles.toString(), {raw:true});
-CMS.registerPreviewTemplate("posts", PostPreview);
+CMS.registerPreviewTemplate("posts", PostPreview);*/
 
 
