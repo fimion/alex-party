@@ -144,7 +144,7 @@
 }
 
 html {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 body {
@@ -231,4 +231,13 @@ pre[class*=language-] {
 	padding: 5px 20px;
 	border-radius: 10px;
 	border: 8px ridge var(--c-highlight-paper);
+}
+
+.title {
+	font-size: 2em;
+	margin: 0.25em 0 0;
+}
+hr {
+	border-top: 1px solid #ddd;
+	margin: 1rem 0;
 }
