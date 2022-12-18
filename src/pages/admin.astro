@@ -34,9 +34,8 @@
       const customMarkdownIt = new markdownIt(options);
 
       const PostPreview = window.createClass({
-      render: function() {
+      render(){
       const entry = this.props.entry;
-        console.log(entry);
       const title = entry?.data?.title;
       const date = entry?.data?.pubDate;
       const body =  entry?.data?.body;
