@@ -180,16 +180,23 @@ body {
 }
 
 .header,.footer {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	text-align: center;
 	margin: 20px 0;
 	border-radius: 10px;
-	height: 80px;
 	background-color: var(--c-highlight-paper);
 	color: var(--c-highlight-ink);
-	padding: 0 20px;
+	padding: 0 10px;
 	border: 8px ridge var(--c-highlight-ink);
+}
+
+@media screen and (min-width: 480px){
+	.header,.footer{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 80px;
+		padding: 0 20px;
+	}
 }
 
 img {
@@ -209,7 +216,7 @@ pre[class*=language-] {
 	font-family: 'Comic Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
-.nav__link {
+.nav__link:not(:first-child) {
 	margin-left: 20px;
 	color: var(--c-highlight-ink);
 	text-decoration: none;
