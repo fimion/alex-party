@@ -34,9 +34,9 @@ url, compiledContent
 					)
 				}
         { rssOnly && (
-            <p>
-              It's a secret to everyone!
-              <a href="https://daverupert.com/rss-club/">
+            <p class="rss-club">
+              This post is a secret!
+              <a href="https://daverupert.com/rss-club/" target="_blank">
                 Read more about RSS Club.
               </a>
             </p>
@@ -56,3 +56,10 @@ url, compiledContent
         </div>
       </section>
 </DefaultLayout>
+<style>
+  .rss-club{
+    font-weight:700;
+    font-style:italic;
+    text-align:right;
+}
+</style>
