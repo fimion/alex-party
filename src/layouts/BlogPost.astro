@@ -9,11 +9,13 @@ export interface Props {
 		title: string;
 		pubDate?: string;
 		updatedDate?: string;
+    rssOnly?: boolean;
+    draft?: boolean;
 	};
 }
 
 const {
-	content: { title, pubDate, updatedDate },
+	content: { title, pubDate, updatedDate, rssOnly },
 url, compiledContent
 } = Astro.props;
 ---
@@ -21,6 +23,7 @@ url, compiledContent
 <DefaultLayout title={title} description={compiledContent()}>
       <section>
 			<article>
+
         <h2><a href={url}>{ title }</a></h2>
 				{pubDate && <DateDisplay datetime={pubDate}/>}
 				{
@@ -30,6 +33,14 @@ url, compiledContent
 						</div>
 					)
 				}
+        { rssOnly && (
+            <p>
+              It's a secret to everyone!
+              <a href="https://daverupert.com/rss-club/">
+                Read more about RSS Club.
+              </a>
+            </p>
+        ) }
         <div class="sans-serif">
 				<slot />
         </div>
