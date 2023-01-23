@@ -29,8 +29,23 @@ Instead of drinking being the activity, make drinking be a thing next to the act
 - Board game night
 - Chess Competition
 - Food Truck Rally
+- Dinner
 
 There can be drinking. That's fine! Just don't make it the focus.
+
+## 2 - Provide Non-Alcoholic Options
+
+This is the big one. As someone who doesn't drink it is a bit of a slap in the face when I go to an event and my options are:
+
+- Water
+- Bottled Water
+- Unsweetened Ice Tea
+
+Let's be honest. You're here probably because you're wondering why I am complaining. That's totally enough options! Nope. No it isn't. This is the equivalent of showing up to a wine tasting to discover you will only be trying out a walmart brand pinot. This is like going to a brewery and only being able to order Natty Light. It's like going to a whiskey tasting and being offered jack and coke. IT IS OFFENSIVE.
+
+### What to do instead: Options
+
+People love options. Minimum, you should be offering sodas. But here's the thing (which you may not know) many local brewers near you make non alcoholic offerings.
 
 
 
