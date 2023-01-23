@@ -23,7 +23,14 @@ If you are hell bent on making an event focused on drinking, please go ahead and
 
 Instead of drinking being the activity, make drinking be a thing next to the activity. Here are a list of potential ideas:
 
-- Tr
+- Team trivia
+- Karaoke
+- Bowling
+- Board game night
+- Chess Competition
+- Food Truck Rally
+
+There can be drinking. That's fine! Just don't make it the focus.
 
 
 
