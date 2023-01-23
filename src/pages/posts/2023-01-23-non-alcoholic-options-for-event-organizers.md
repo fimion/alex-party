@@ -5,17 +5,9 @@ pubDate: 2023-01-23T12:42:16.798-05:00
 draft: true
 rssOnly: false
 ---
-```
-
-```
-
 Todd Libby recently wrote about the need for conference organizers to support those of us who don't want to drink. As someone who has been sober for 13+ years now, I agree whole heartedly with this sentiment. Sometimes it is difficult for people who don't regularly think about this to know how to have actionable ways of changing things though. So, I'm going to give you some tips. You're welcome.
 
-```
-
-```
-
-### 1 - Alcohol is not the focus
+## 1 - Alcohol is not the focus
 
 If your event centers around alcohol, you've already failed. I cannot save you if you decide a “KEG STAND AND BEER PONG/FLIP CUP COMPETITION” is an appropriate thing to have at a professional event. In fact, I might suggest you look into getting help. Anytime you make an event that focuses on drinking as the primary activity, you have excluded the following people:
 
