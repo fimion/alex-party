@@ -18,6 +18,7 @@ If your event centers around alcohol, you've already failed. I cannot save you i
 - Anyone under the age of 21 (This is more of USA thing, but generally, still a thing.)
 - Anyone who doesn't feel safe being around people drinking
 - Anyone who doesn't feel like drinking that day
+- Anyone who just doesn't drink
 
 If you are hell bent on making an event focused on drinking, please go ahead and print up that list and add it to your flyers to declare that you are fine discriminating against those people.
 
@@ -27,7 +28,7 @@ Instead of drinking being the activity, make drinking be a thing next to the act
 
 - Team trivia
 - Karaoke
-- Bowling
+- ~~Bowling~~ (Probably not bowling, it excludes people in a different way)
 - Board game night
 - Chess Competition
 - Food Truck Rally
@@ -73,3 +74,11 @@ This one is harder. If you can't make the craft sodas or the mocktails work out,
 ## Conclusion
 
 Y'all, I know It's tough being an event organizer. I get it. If you're already taking into account dietary restrictions, go the extra step, and try making things better for everyone.  A little bit of work goes a very long way.
+
+
+
+
+
+## Update
+
+Just so we are clear, this post isn't all encompassing. I have a very USA centric perspective, and you should adjust accordingly to your region/audience. Also these suggestions are not exhaustive. There are lots of other options out there. Not all of these suggestions may work for everyone and are purely my own preferences. Know your audience, and know who you want to have as part of your community.
