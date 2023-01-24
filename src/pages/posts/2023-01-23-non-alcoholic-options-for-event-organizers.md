@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPost.astro
 title: Non-Alcoholic Options for Event Organizers
 pubDate: 2023-01-23T12:42:16.798-05:00
-draft: true
+draft: false
 rssOnly: false
 ---
 Todd Libby recently wrote about the need for conference organizers to support those of us who don't want to drink. As someone who has been sober for 13+ years now, I agree whole heartedly with this sentiment. Sometimes it is difficult for people who don't regularly think about this to know how to have actionable ways of changing things though. So, I'm going to give you some tips. You're welcome.
