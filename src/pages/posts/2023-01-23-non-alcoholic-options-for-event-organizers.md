@@ -13,7 +13,7 @@ If your event centers around alcohol, you've already failed. I cannot save you i
 
 - Recovering alcoholics (Hi.)
 - People who take medication that doesn't allow them to drink
-- Religious reasons
+- People who don't drink for religious reasons
 - People who are pregnant
 - Anyone under the age of 21 (This is more of USA thing, but generally, still a thing.)
 - Anyone who doesn't feel safe being around people drinking
