@@ -13,6 +13,7 @@ If your event centers around alcohol, you've already failed. I cannot save you i
 
 - Recovering alcoholics (Hi.)
 - People who take medication that doesn't allow them to drink
+- Religious reasons
 - People who are pregnant
 - Anyone under the age of 21 (This is more of USA thing, but generally, still a thing.)
 - Anyone who doesn't feel safe being around people drinking
@@ -69,4 +70,6 @@ This is everything you need to make a fantastic mocktail. I have been places tha
 
 This one is harder. If you can't make the craft sodas or the mocktails work out, give me food. But it needs to be amazing. Not "I ordered pizza hut" or the Presidential Mcdonalds Meal. It needs to be something local. Something unique to the area. something that will leave me talking about it afterwards. I can't give you specifics on this, dear reader, but you will know it when you have it right.
 
+## Conclusion
 
+Y'all, I know It's tough being an event organizer. I get it. If you're already taking into account dietary restrictions, go the extra step, and try making things better for everyone.  A little bit of work goes a very long way.
