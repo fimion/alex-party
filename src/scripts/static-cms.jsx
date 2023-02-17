@@ -2,7 +2,7 @@ import CMS from '@staticcms/core'
 import React from "react"
 import styles from '../styles/global.css?raw';
 import prismStyles from 'prismjs/themes/prism-tomorrow.css?raw';
-
+import {debouce} from 'lodash-es';
 
 import MarkdownIt from "markdown-it";
 import Prism from "prismjs";
@@ -31,27 +31,27 @@ const PostPreview = (props)=>{
   const body =  entry?.data?.body;
   const bodyRendered = customMarkdownIt.render(body||'');
   return (<div className="layout">
-                <header className="header">
-                  <h1>
-                    <a href="#" className="nav__link home" >Alex.Party</a>
-                  </h1>
-                  <nav class="nav">
-                    <a href="#" className="nav__link" >Home</a>
-                    <a href="#" className="nav__link" >About</a>
-                  </nav>
-                </header>
-                <main className="content">
-                  <section>
-                    <article>
-                      <h2><a href="#">{title}</a></h2>
-                <div className="sans-serif">
-                  <p>{new Intl.DateTimeFormat('en-us').format(date ? new Date(date) : new Date()) }</p>
-                  <div dangerouslySetInnerHTML={{__html:bodyRendered}}></div>
-                </div>
-              </article>
-            </section>
-          </main>
-        </div>);
+            <header className="header">
+              <h1>
+                <a href="#" className="nav__link home" >Alex.Party</a>
+              </h1>
+              <nav class="nav">
+                <a href="#" className="nav__link" >Home</a>
+                <a href="#" className="nav__link" >About</a>
+              </nav>
+            </header>
+            <main className="content">
+              <section>
+                <article>
+                  <h2><a href="#">{title}</a></h2>
+                  <div className="sans-serif">
+                    <p>{new Intl.DateTimeFormat('en-us').format(date ? new Date(date) : new Date()) }</p>
+                    <div dangerouslySetInnerHTML={{__html:bodyRendered}}></div>
+                  </div>
+                </article>
+              </section>
+            </main>
+          </div>);
 };
 CMS.registerPreviewStyle(styles.toString()+`\nbody {background: #000 0 0/200px 200px url("/img/memphis-design.svg");}`, { raw: true });
 CMS.registerPreviewStyle(prismStyles.toString(), {raw:true});
