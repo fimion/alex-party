@@ -2,7 +2,6 @@ import CMS from '@staticcms/core'
 import React from "react"
 import styles from '../styles/global.css?raw';
 import prismStyles from 'prismjs/themes/prism-tomorrow.css?raw';
-import {debouce} from 'lodash-es';
 
 import MarkdownIt from "markdown-it";
 import Prism from "prismjs";
