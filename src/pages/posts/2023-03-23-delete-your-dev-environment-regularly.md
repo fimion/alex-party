@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPost.astro
 title: Delete Your Dev Environment Regularly
 pubDate: 2023-03-22T20:42:04.900-04:00
-draft: true
+draft: false
 rssOnly: false
 ---
 I have recently had the opportunity to muse about process and how we maintain a system. One of the things in particular that I have been thinking about the most is onboarding new people into your project.
