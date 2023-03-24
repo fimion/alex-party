@@ -15,7 +15,7 @@ export interface Props {
 }
 
 const {
-	content: { title, pubDate, updatedDate, rssOnly },
+	content: { title, pubDate, updatedDate, rssOnly, draft },
 url, compiledContent
 } = Astro.props;
 ---
@@ -23,8 +23,7 @@ url, compiledContent
 <DefaultLayout title={title} description={compiledContent()}>
       <section>
 			<article>
-
-        <h2><a href={url}>{ title }</a></h2>
+        <h2><a href={url}>{ title }{draft && (<style style="color:red">This is a Draft. Shhhh....</s>)}</a></h2>
 				{pubDate && <DateDisplay datetime={pubDate}/>}
 				{
 					updatedDate && (
