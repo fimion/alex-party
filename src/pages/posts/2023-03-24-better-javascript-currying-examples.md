@@ -27,7 +27,7 @@ This example shows up because it is the same as mathematical proofs. It's there 
 
 So “when” is the bigger thing as to why you want to write a curried function. Curried functions are great when you know want to provide a common value across a function call multiple times, but it may not be a static value.
 
-So let's make a **practical** example of a Currying Function. The example that you have likely run into before is the authenticated fetch handler. 
+So let's make a **practical** example of a Currying Function. The example that you have likely run into before is the authenticated fetch handler.
 
 ```js
 export const createAuthFetch = (token) =>{
@@ -65,14 +65,6 @@ import authFetch from './auth-fetch.js'
 await authFetch('/api/that/needs/authorization');
 ```
 
+This is a real world example.
 
-
-
-
-This is a real world example. 
-
-
-
-
-
-Please stop teaching people to add numbers with Currying Functions as your only example. There are so many more usefule ways to show this technique!
+Please stop teaching people to add numbers with Currying Functions as your only example. There are so many more useful ways to show this technique!
