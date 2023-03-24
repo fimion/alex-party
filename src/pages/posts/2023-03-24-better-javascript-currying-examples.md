@@ -31,7 +31,7 @@ So let's make a **practical** example of a Currying Function. The example that y
 
 ```js
 export const createAuthFetch = (token) =>{
-  return (url, options = {}) =>{
+  return (url) =>(options = {}){
     options.headers = {
       ...(options.headers||{}), 
       'Authorization':`Bearer ${token}`
@@ -44,7 +44,7 @@ export const createAuthFetch = (token) =>{
 Now you would never use this function like this (even though you could):
 
 ```js
-await createAuthFetch(token)(url)
+await createAuthFetch(token)(url)()
 ```
 
 The more likely scenario is that you would have another file that would do something like this:
@@ -53,18 +53,22 @@ The more likely scenario is that you would have another file that would do somet
 import {createAuthFetch} from './create-auth-fetch.js';
 import {getToken} from './auth-provider.js';
 
-const authFetch = createAuthFetch(getToken());
-export default authFetch;
+const authFetchFactory = createAuthFetch(getToken());
+// Now we generate a handler for each endpoint.
+export const fetchUsers = authFetchFactory('/api/users')
+export const fetchReports = authFetchFactory('/api/reports');
 ```
 
 Now anywhere in our code base that we want to fetch from our authorized api endpoint, we don't have to pass a token around.
 
 ```js
-import authFetch from './auth-fetch.js'
+import fetchUsers from './auth-fetch.js'
 
-await authFetch('/api/that/needs/authorization');
+await fetchUsers({method:'GET'});
 ```
 
 This is a real world example.
 
 Please stop teaching people to add numbers with Currying Functions as your only example. There are so many more useful ways to show this technique!
+
+**Update:** as pointed out, a Currying Function only has one argument technically. So I've updated the examples so it is a proper Currying Function.
