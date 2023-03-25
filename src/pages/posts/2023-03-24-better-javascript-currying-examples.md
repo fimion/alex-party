@@ -31,7 +31,7 @@ So let's make a **practical** example of a Currying Function. The example that y
 
 ```js
 export const createAuthFetch = (token) =>{
-  return (url) =>(options = {}){
+  return (url) =>(options = {})=>{
     options.headers = {
       ...(options.headers||{}), 
       'Authorization':`Bearer ${token}`
