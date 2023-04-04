@@ -93,51 +93,53 @@ console.log(CMS.styles);
 CMS.registerPreviewTemplate("posts", PostPreview);
 
 CMS.init({
-  backend: {
-    name: "github",
-    repo: "fimion/alex-party",
-    branch: "master",
-  },
-  
-  logo_url: "/favicon.svg",
-  media_folder: "public/uploads",
-  public_folder: "/uploads",
-  site_url: "https://alex.party",
-  display_url: "https://alex.party",
-  collections: [
-    {
-      name: "posts",
-      label: "Posts",
-      label_singular: "Post",
-      folder: "src/pages/posts",
-      create: true,
-      slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
-      summary: "{{pubDate}} - {{title}} - Draft: {{draft}}",
-      sortable_fields: {
-        fields: ["pubDate"],
-        default: {
-          field: "pubDate",
-          direction: "Descending",
-        },
-      },
-      fields: [
-        {
-          name: "layout",
-          label: "Layout",
-          widget: "hidden",
-          default: "../../layouts/BlogPost.astro",
-        },
-        { label: "Title", name: "title", widget: "string" },
-        { label: "Publish Date", name: "pubDate", widget: "datetime" },
-        { label: "Draft", name: "draft", widget: "boolean", default: true },
-        {
-          label: "RSS Only",
-          name: "rssOnly",
-          widget: "boolean",
-          default: false,
-        },
-        { label: "Body", name: "body", widget: "markdown" },
-      ],
+  config: {
+    backend: {
+      name: "github",
+      repo: "fimion/alex-party",
+      branch: "master",
     },
-  ],
+    
+    logo_url: "/favicon.svg",
+    media_folder: "public/uploads",
+    public_folder: "/uploads",
+    site_url: "https://alex.party",
+    display_url: "https://alex.party",
+    collections: [
+      {
+        name: "posts",
+        label: "Posts",
+        label_singular: "Post",
+        folder: "src/pages/posts",
+        create: true,
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}",
+        summary: "{{pubDate}} - {{title}} - Draft: {{draft}}",
+        sortable_fields: {
+          fields: ["pubDate"],
+          default: {
+            field: "pubDate",
+            direction: "Descending",
+          },
+        },
+        fields: [
+          {
+            name: "layout",
+            label: "Layout",
+            widget: "hidden",
+            default: "../../layouts/BlogPost.astro",
+          },
+          { label: "Title", name: "title", widget: "string" },
+          { label: "Publish Date", name: "pubDate", widget: "datetime" },
+          { label: "Draft", name: "draft", widget: "boolean", default: true },
+          {
+            label: "RSS Only",
+            name: "rssOnly",
+            widget: "boolean",
+            default: false,
+          },
+          { label: "Body", name: "body", widget: "markdown" },
+        ],
+      },
+    ],
+  },
 });
