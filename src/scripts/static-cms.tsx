@@ -83,19 +83,22 @@ const PostPreview = (props) => {
     </div>
   );
 };
+CMS.registerPreviewStyle(prismStyles.toString(), { raw: true });
 CMS.registerPreviewStyle(
   styles.toString() +
     `\nbody {background: #000 0 0/200px 200px url("/img/memphis-design.svg");}`,
   { raw: true }
 );
-CMS.registerPreviewStyle(prismStyles.toString(), { raw: true });
+console.log(CMS.styles);
 CMS.registerPreviewTemplate("posts", PostPreview);
-const config = {
+
+CMS.init({
   backend: {
     name: "github",
     repo: "fimion/alex-party",
     branch: "master",
   },
+  
   logo_url: "/favicon.svg",
   media_folder: "public/uploads",
   public_folder: "/uploads",
@@ -137,6 +140,4 @@ const config = {
       ],
     },
   ],
-};
-
-CMS.init({ config });
+});

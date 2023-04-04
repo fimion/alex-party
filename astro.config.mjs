@@ -13,10 +13,13 @@ import netlify from "@astrojs/netlify/functions";
 export default defineConfig({
   site: "https://alex.party",
   markdown: {
-    syntaxHighlight: 'prism',
-    drafts: true
+    syntaxHighlight: "prism",
+    drafts: true,
   },
   integrations: [mdx(), sitemap(), vue(), react()],
   output: "server",
-  adapter: netlify()
+  adapter: netlify(),
+  server: {
+    host: "0.0.0.0",
+  },
 });
