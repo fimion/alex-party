@@ -54,7 +54,7 @@ const PostPreview = (props) => {
             Alex.Party
           </a>
         </h1>
-        <nav class="nav">
+        <nav className="nav">
           <a href="#" className="nav__link">
             Home
           </a>
