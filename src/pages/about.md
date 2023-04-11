@@ -10,6 +10,6 @@ Hi! My name is Alex Riviere. I'm a web developer from Atlanta, GA that specializ
 - I also help organize [PyATL](https://www.meetup.com/python-atlanta/)
 - I was regular panelist on [Enjoy the Vue](https://enjoythevue.io)
 - My personal playground is over at [iCannot.design.](https://icannot.design)
-- [Here is my resume.](/uploads/Alex-Riviere-Resume-2021.01.25.pdf)
+- [Here is my resume.](/uploads/alex_riviere_resume_11-04-2023-10-26-31.pdf)
 
 Hopefully, something here will be helpful to you.
