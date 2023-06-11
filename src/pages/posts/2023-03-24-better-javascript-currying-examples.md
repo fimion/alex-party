@@ -25,7 +25,7 @@ This example shows up because it is the same as mathematical proofs. It's there 
 
 ## When to Make a Currying Function?
 
-So “when” is the bigger thing as to why you want to write a curried function. Curried functions are great when you know want to provide a common value across a function call multiple times, but it may not be a static value.
+So “when” is the bigger thing as to why you want to write a currying function. Currying functions are great when you know want to provide a common value across a function call multiple times, but it may not be a static value.
 
 So let's make a **practical** example of a Currying Function. The example that you have likely run into before is the authenticated fetch handler.
 
