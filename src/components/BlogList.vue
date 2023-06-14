@@ -5,8 +5,8 @@
         <h2>
           <a :href="post.url">{{ post.frontmatter.title }}</a>
         </h2>
+        <p><date-display :datetime="post.frontmatter.pubDate" /></p>
         <div class="sans-serif">
-          <p><date-display :datetime="post.frontmatter.pubDate" /></p>
           <div v-html="splitExcerpt(post.compiledContent())"></div>
           <p><a :href="post.url">Continue reading "{{ post.frontmatter.title }}"</a></p>
         </div>

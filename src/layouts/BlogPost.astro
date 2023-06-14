@@ -1,65 +1,75 @@
 ---
-import DefaultLayout from './DefaultLayout.astro';
-import DateDisplay from "../components/DateDisplay.vue"
-
+import DefaultLayout from "./DefaultLayout.astro";
+import DateDisplay from "../components/DateDisplay.vue";
 
 export interface Props {
   url: string;
-	content: {
-		title: string;
-		pubDate?: string;
-		updatedDate?: string;
+  content: {
+    title: string;
+    pubDate?: string;
+    updatedDate?: string;
     rssOnly?: boolean;
     draft?: boolean;
-	};
+  };
 }
 
 const {
-	content: { title, pubDate, updatedDate, rssOnly, draft },
-url, compiledContent
+  content: { title, pubDate, updatedDate, rssOnly, draft },
+  url,
+  compiledContent,
 } = Astro.props;
 ---
 
 <DefaultLayout title={title} description={compiledContent()}>
-      <section>
-			<article>
-        <h2><a href={url}>{ title }</a></h2>
-        {draft && (<h3 style="color:red">(This is a Draft. Shhhh....)</h3>)}
-				{pubDate && <DateDisplay datetime={pubDate}/>}
-				{
-					updatedDate && (
-						<div>
-							Last updated on <DateDisplay datetime={updatedDate} />
-						</div>
-					)
-				}
-        { rssOnly && (
-            <p class="rss-club">
-              This post is a secret!
-              <a href="https://daverupert.com/rss-club/" target="_blank">
-                Read more about RSS Club.
-              </a>
-            </p>
-        ) }
-        <div class="sans-serif">
-				<slot />
-        </div>
-			</article>
-        <div class="sans-serif">
-          <script is:inline
-                  src="https://utteranc.es/client.js"
-                  repo="fimion/alex-party"
-                  issue-term="pathname"
-                  label="comments"
-                  theme="github-light"
-                  crossorigin="anonymous" async="async"></script>
-        </div>
-      </section>
+  <section>
+    <article>
+      <h2><a href={url}>{title}</a></h2>
+      {
+        draft && (
+          <h3 style="color:red">
+            (This is a Draft. Don't share it. Shhhh....)
+          </h3>
+        )
+      }
+      {pubDate && <DateDisplay datetime={pubDate} />}
+      {
+        updatedDate && (
+          <div>
+            Last updated on <DateDisplay datetime={updatedDate} />
+          </div>
+        )
+      }
+      {
+        rssOnly && (
+          <p class="rss-club">
+            This post is a secret!
+            <a href="https://daverupert.com/rss-club/" target="_blank">
+              Read more about RSS Club.
+            </a>
+          </p>
+        )
+      }
+      <div class="sans-serif">
+        <slot />
+      </div>
+    </article>
+    <div class="sans-serif">
+      <script
+        is:inline
+        src="https://utteranc.es/client.js"
+        repo="fimion/alex-party"
+        issue-term="pathname"
+        label="comments"
+        theme="github-light"
+        crossorigin="anonymous"
+        async="async"></script>
+    </div>
+  </section>
 </DefaultLayout>
 <style>
-  .rss-club{
-    font-weight:700;
-    font-style:italic;
-    text-align:right;
-}
+  .rss-club {
+    font-weight: 700;
+    font-style: italic;
+    text-align: right;
+  }
 </style>
