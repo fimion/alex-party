@@ -13,7 +13,7 @@ Let's start with this. JSON:API is a specification for how to format the data fo
 
 Here's an example of a response from the JSON:API home page:
 
-```
+```js
 {
   "links": {
     "self": "http://example.com/articles",
@@ -103,9 +103,5 @@ Nope. GraphQL requires me to dig through a lot of documentation to figure out wh
 ### You're being unkind to GraphQL
 
 Nope. Really not. I'm sure that there are places where GQL can do really well that I can't think of (maybe if you are using a graph database?) but honestly, Those tend to not be things I work on. If you like using GraphQL, great! I'm not gonna yuck your yum. But I prefer REST APIs. They just make more sense to me.
-
-
-
-
 
 You're welcome Dave.
