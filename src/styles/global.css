@@ -203,7 +203,7 @@ img {
 	max-width: 100%;
 }
 
-code {
+:root:root:root code {
 	background: var(--c-paper);
 	color: var(--c-ink);
 	font-family: 'Comic Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
@@ -211,8 +211,8 @@ code {
 	padding-right: 2px;
 }
 
-code[class*=language-],
-pre[class*=language-] {
+:root:root:root :is(code[class*=language-],
+pre[class*=language-]) {
 	font-family: 'Comic Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
 }
 
