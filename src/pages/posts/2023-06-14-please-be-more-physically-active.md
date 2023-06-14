@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPost.astro
 title: Please Be More Physically Active
 pubDate: 2023-06-14T16:10:06.741-04:00
-draft: true
+draft: false
 rssOnly: false
 ---
 Alright, I'll admit I am the least qualified person to talk about this. But as a mediocre white guy in tech on the internet, I'm going to share my experience.
