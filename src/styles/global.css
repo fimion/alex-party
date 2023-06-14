@@ -141,6 +141,22 @@
 	--c-ink: #000;
 	--c-paper: #fff;
 	--c-background-fallback:#7effd4;
+	--ff-sans-serif: 'Comic Neue Angular',
+		sans-serif;
+	--ff-handwritten: 'Comic Neue',
+		'Comic Sans MS',
+		'Segoe Print',
+		'Bradley Hand',
+		Chilanka,
+		TSCu_Comic,
+		casual,
+		cursive;
+	--ff-mono: 'Comic Mono',
+		Consolas,
+		Monaco,
+		'Andale Mono',
+		'Ubuntu Mono',
+		monospace;
 }
 
 html {
@@ -148,7 +164,7 @@ html {
 }
 
 body {
-	font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
+	font-family: var(--ff-handwritten);
 	margin: 0;
 	padding: 0;
 
@@ -169,7 +185,7 @@ body {
 }
 
 .sans-serif {
-	font-family: 'Comic Neue Angular', sans-serif;
+	font-family: var(--ff-sans-serif);
 }
 
 .layout {
@@ -206,14 +222,14 @@ img {
 code {
 	background: var(--c-paper);
 	color: var(--c-ink);
-	font-family: 'Comic Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: var(--ff-mono);
 	padding-left: 2px;
 	padding-right: 2px;
 }
 
 :root:root:root :is(code[class*=language-],
 pre[class*=language-]) {
-	font-family: 'Comic Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: var(--ff-mono);
 }
 
 .nav__link:not(:first-child) {
