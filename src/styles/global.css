@@ -135,12 +135,26 @@
 	url('/fonts/comic-mono/comic-mono-latin-700-normal.woff') format('woff');
 }
 
+@property --c-paper{
+	syntax: "<color>";
+	inherits: true;
+	initial-value: #fff;
+}
+@property --c-ink{
+	syntax: "<color>";
+	inherits: true;
+	initial-value: #000;
+}
+
 :root{
-	--c-highlight-paper:#69f;
+	--c-highlight-paper: #69f;
 	--c-highlight-ink: #fff;
 	--c-ink: #000;
 	--c-paper: #fff;
 	--c-background-fallback:#7effd4;
+	--c-link-paper: silver;
+	--c-link-border: buttonface;
+	--c-link-ink: black;
 	--ff-sans-serif: 'Comic Neue Angular',
 		sans-serif;
 	--ff-handwritten: 'Comic Neue',
@@ -160,7 +174,7 @@
 }
 
 html {
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 body {
@@ -189,20 +203,20 @@ body {
 }
 
 .layout {
-	max-width: 760px;
+	max-width: 80ch;
 	margin: 0 auto;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 .header,.footer {
 	text-align: center;
-	margin: 20px 0;
-	border-radius: 10px;
+	margin: 1rem 0;
+	border-radius: 0.5rem;
 	background-color: var(--c-highlight-paper);
 	color: var(--c-highlight-ink);
-	padding: 0 10px;
-	border: 8px ridge var(--c-highlight-ink);
+	padding: 0 0.5rem;
+	border: 0.4rem ridge var(--c-highlight-ink);
 }
 
 @media screen and (min-width: 480px){
@@ -210,9 +224,43 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 80px;
-		padding: 0 20px;
+		height: 4rem;
+		padding: 0 1rem;
 	}
+}
+
+main a:is(:link,:visited){
+	font-weight: bolder;
+	border: 0.2rem dotted transparent;
+	color: var(--c-link-ink);
+	transition: border-color 0.2s linear;
+}
+
+@keyframes border-whoosh{
+	0%, 100%{
+		border-color: var(--c-link-border);
+		border-block-start-color: var(--c-highlight-paper);
+	}
+	20%{
+		border-color: var(--c-link-border);
+		border-inline-end-color: var(--c-highlight-paper);
+	}
+	50%{
+		border-color: var(--c-link-border);
+		border-block-end-color: var(--c-highlight-paper);
+	}
+	70%{
+		border-color: var(--c-link-border);
+		border-inline-start-color: var(--c-highlight-paper);
+	}
+}
+
+main a:is(:focus-visible, :hover){
+	transition: none;
+	animation: 1s linear border-whoosh infinite;
+}
+main a:active{
+	border-style: inset;
 }
 
 img {
@@ -223,8 +271,7 @@ code {
 	background: var(--c-paper);
 	color: var(--c-ink);
 	font-family: var(--ff-mono);
-	padding-left: 2px;
-	padding-right: 2px;
+	padding-inline: 0.1rem;
 }
 
 :root:root:root :is(code[class*=language-],
@@ -233,7 +280,7 @@ pre[class*=language-]) {
 }
 
 .nav__link:not(:first-child) {
-	margin-left: 20px;
+	margin-left: 1rem;
 	color: var(--c-highlight-ink);
 	text-decoration: none;
 }
@@ -250,10 +297,10 @@ pre[class*=language-]) {
 }
 
 .content {
-	background-color: rgb(255, 255, 255);
-	padding: 5px 20px;
-	border-radius: 10px;
-	border: 8px ridge var(--c-highlight-paper);
+	background-color: var(--c-paper);
+	padding: 0.25rem 1rem;
+	border-radius: 0.5rem;
+	border: 0.4rem ridge var(--c-highlight-paper);
 }
 
 .title {
@@ -261,6 +308,18 @@ pre[class*=language-]) {
 	margin: 0.25em 0 0;
 }
 hr {
-	border-top: 1px solid #ddd;
+	border-top: 0.1rem dotted var(--c-highlight-paper);
 	margin: 1rem 0;
+}
+
+blockquote{
+	--c-inset-paper: var(--c-highlight-paper);
+	--c-inset-border: color-mix(in srgb, var(--c-highlight-paper) 80%, var(--c-ink));
+	--c-inset-ink: var(--c-highlight-ink);
+	border: 0.3rem inset var(--c-inset-border);
+	background-color: var(--c-inset-paper);
+	color: var(--c-inset-ink);
+	font-size: 1.3rem;
+	padding-inline: 2ch;
+	margin-inline: 0;
 }
