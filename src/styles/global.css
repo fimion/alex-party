@@ -241,7 +241,7 @@ main a:is(:link,:visited){
 		border-color: var(--c-link-border);
 		border-block-start-color: var(--c-highlight-paper);
 	}
-	20%{
+	10%{
 		border-color: var(--c-link-border);
 		border-inline-end-color: var(--c-highlight-paper);
 	}
@@ -249,15 +249,21 @@ main a:is(:link,:visited){
 		border-color: var(--c-link-border);
 		border-block-end-color: var(--c-highlight-paper);
 	}
-	70%{
+	60%{
 		border-color: var(--c-link-border);
 		border-inline-start-color: var(--c-highlight-paper);
 	}
 }
 
+
 main a:is(:focus-visible, :hover){
-	transition: none;
-	animation: 1s linear border-whoosh infinite;
+	border-color: var(--c-highlight-paper);
+}
+@media (prefers-reduced-motion: no-preference){
+	main a:is(:focus-visible, :hover){
+		transition: none;
+		animation: 0.75s linear border-whoosh infinite;
+	}
 }
 main a:active{
 	border-style: inset;
