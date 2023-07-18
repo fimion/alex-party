@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPost.astro
 title: Classes, Super, and You
 pubDate: 2023-07-18T09:37:20.321-04:00
-draft: true
+draft: false
 rssOnly: false
 ---
 Last week [Chris and Dave mentioned](https://shoptalkshow.com/573/#t=30:21) that they don't get why you have to call `super` when you're in a class.
