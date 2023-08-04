@@ -89,7 +89,7 @@ CMS.registerPreviewStyle(
     `\nbody {background: #000 0 0/200px 200px url("/img/memphis-design.svg");}`,
   { raw: true }
 );
-console.log(CMS.styles);
+
 CMS.registerPreviewTemplate("posts", PostPreview);
 
 CMS.init({
@@ -99,7 +99,7 @@ CMS.init({
       repo: "fimion/alex-party",
       branch: "master",
     },
-    
+
     logo_url: "/favicon.svg",
     media_folder: "public/uploads",
     public_folder: "/uploads",
