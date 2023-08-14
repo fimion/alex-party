@@ -52,12 +52,13 @@ This file is in BETA. Please test and contribute to the discussion:
       <title><xsl:value-of select="/rss/channel/title"/> Web Feed</title>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-      <style>
+      <style>/* <![CDATA[ */
       ${globalCss}
       .header{
         display: block;
         height: auto;
       }
+      /* ]]> */
       </style>
     </head>
     <body class="bg-white">
