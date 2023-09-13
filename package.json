@@ -18,7 +18,7 @@
     "@astrojs/rss": "^2.4.3",
     "@astrojs/sitemap": "^2.0.1",
     "@astrojs/vue": "^2.2.1",
-    "@staticcms/core": "^3.0.0",
+    "@staticcms/core": "^3.2.0",
     "astro": "^2.10.1",
     "htm": "^3.1.1",
     "lodash-es": "^4.17.21",
