@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogPost.astro
-title: "useFetch in Next 3: The Proper Way"
+title: "useFetch in Nuxt 3: The Proper Way"
 pubDate: 2023-09-17T10:33:29.688-04:00
 draft: false
 rssOnly: false
