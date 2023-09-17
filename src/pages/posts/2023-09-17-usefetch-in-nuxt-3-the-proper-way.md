@@ -61,7 +61,7 @@ export const async useDataThing = () => {
          // Let's make all the other stuff available too: status, errors, etc
          ...theRest
         } = await useFetch(
-    // We can pass a function ass the url param so that we can get the current
+    // We can pass a function as the url param so that we can get the current
     // value of dataThingId when fetch is called.
     ()=>`api/dataThing/${dataThingId.value}`,
     {
