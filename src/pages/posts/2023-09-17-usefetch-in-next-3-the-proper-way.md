@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: "useFetch in Next 3: The Proper Way"
-pubDate: 2023-09-17T09:32:17.740
-draft: true
+pubDate: 2023-09-17T10:33:29.688-04:00
+draft: false
 rssOnly: false
 ---
 I have recently seen at least 2 people make a wrapper around `useFetch` in Nuxt 3 incorrectly by trying to call `useFetch` as though it were `fetch`. While the approach they take will usually work (in general), it will very quickly cause you to have multiple errors and weird side effects.
