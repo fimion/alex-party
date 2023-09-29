@@ -46,7 +46,7 @@ There is a whole bunch of bad errors you're gonna get from this, mostly stemming
 Let's rewrite this in a better way.
 
 ```js
-export const async useDataThing = () => {
+export const  useDataThing = async () => {
   // grabing some globally available data via pinia, useStorage, vuex, useState, etc
   const dataThing = useGlobalDataThing();
   const dataThingId = useGlobalDataThingId();
@@ -78,7 +78,7 @@ export const async useDataThing = () => {
     dataThing.value = data.value;
   }
   if (!dataThing.value) {
-    fetchDataThing();
+    await fetchDataThing();
   }
   return {
     dataThing,
@@ -91,8 +91,6 @@ export const async useDataThing = () => {
 ```
 
 Doing it this way will Make it way more consistent for you. You can now fetch a different piece of data by doing:
-
-
 
 ```js
 const {dataThing, dataThingId, fetchDataThing} = await useDataThing();
