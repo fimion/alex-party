@@ -17,7 +17,7 @@ So my friend had a problem:
 
 > I've not dealt with this before: I'm helping someone who has a React component that is reused across a codebase. It pulls variables from a Context to be used in a few functions. BUT, if it's in a different part of the app, those variables should come from a different Context. The component has a prop that tells you which context it should pull from, but you can't put the useContext hooks in an if statement
 
-When I see an issue like this my gut instinct is to point out that in vue you can have optionally reactive data and/or throw this type of thing into a computed value and move on with your day. But I bit my tongue, and made a minimal reproduction with a solution.
+~~When I see an issue like this my gut instinct is to point out that in vue you can have optionally reactive data and/or throw this type of thing into a computed value and move on with your day.~~ _(Edit: I have been informed that the react linter will pitch a fit about this, but_`_useContext_` _can actually be accessed conditionally)_ But I bit my tongue, and made a minimal reproduction with a solution.
 
 ### Shared Context - Normal Brain Version
 
