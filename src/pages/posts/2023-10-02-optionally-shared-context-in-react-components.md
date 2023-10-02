@@ -61,7 +61,7 @@ Apps.forEach((Component) => {
 });
 ```
 
-[Here's a working demo]([https://codepen.io/fimion/pen/GRPXWrd](https://codepen.io/fimion/pen/GRPXWrd))
+[Here's a working demo](https://codepen.io/fimion/pen/GRPXWrd)
 
 The way this works is by requesting both context values. If the 1st one exists, we use that. if the second one exists, then we use that instead.
 
@@ -158,7 +158,7 @@ Apps.forEach((Component) => {
 });
 ```
 
-[Working demo here]([https://codepen.io/fimion/pen/ZEVMOER](https://codepen.io/fimion/pen/ZEVMOER))
+[Working demo here](https://codepen.io/fimion/pen/ZEVMOER)
 
 This version allows you to pass a `context` prop that can be an array of strings or just a string, and specify which context order you want, or which context specifically you want.
 
@@ -376,7 +376,7 @@ Apps.forEach((Component) => {
 });
 ```
 
-[Working demo here]([https://codepen.io/fimion/pen/PoXdGGa](https://codepen.io/fimion/pen/PoXdGGa))
+[Working demo here](https://codepen.io/fimion/pen/PoXdGGa)
 
 This is probably the most flexible version. In theory we could also allow the fallback to be a function so if you wanted a fresh version of something you could do that, but ultimately, I don't want to be responsible for that, and lunch is ready.
 
