@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: Optionally Shared Context in React Components
-pubDate: 2023-10-02T15:32:27.751
-draft: true
+pubDate: 2023-10-02T12:00:11.302-04:00
+draft: false
 rssOnly: false
 ---
 Right, here's a weird one. I know what many of you are thinking:
