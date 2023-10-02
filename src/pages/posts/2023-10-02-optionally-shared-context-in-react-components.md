@@ -63,7 +63,7 @@ Apps.forEach((Component) => {
 
 [Here's a working demo]([https://codepen.io/fimion/pen/GRPXWrd](https://codepen.io/fimion/pen/GRPXWrd))
 
-The way this works is by requesting both context values. If the 1st one exists, we use that. if the second one exists, then we use that instead. 
+The way this works is by requesting both context values. If the 1st one exists, we use that. if the second one exists, then we use that instead.
 
 Bada-bing, Bada-boom, **solved**.
 
@@ -162,7 +162,7 @@ Apps.forEach((Component) => {
 
 This version allows you to pass a `context` prop that can be an array of strings or just a string, and specify which context order you want, or which context specifically you want.
 
-People said this looked good. 
+People said this looked good.
 
 Bada-bing, Bada-boom, **done**.
 
@@ -172,7 +172,7 @@ Fine, brain. Let's go.
 
 ### SharedContext - Galaxy Brain Mode
 
-Let's start with the generic thing we can use to make this better. 
+Let's start with the generic thing we can use to make this better.
 
 ```js
 // shared-context.js
@@ -251,7 +251,7 @@ export class SharedContext {
 }
 ```
 
-This code gives us a generic way of creating “Shared Context” states that have a default order. You use `SharedContext.register` a context to a shared namespace, and it will return a unique Identifier Symbol that you can use to specify the context again when you want to use it. Otherwise it'll use the ones that are registered in the order they are registered. To use the Shared context you call the `SharedContext.use` hook, where you give it the shared namespace, and a fallback value as a default. you can also specify the specific context, or order of the context you would like to use.
+This code gives us a generic way of creating “Shared Context” states that have a default order. You use `SharedContext.register` to register a context to a shared namespace, and it will return a unique Identifier Symbol that you can use to specify the context again when you want to use it. Otherwise it'll use the ones that are registered in the order they are registered. To use the Shared context you call the `SharedContext.use` hook, where you give it the shared namespace, and a fallback value as a default. you can also specify the specific context, or order of the context you would like to use.
 
 The code to use this looks something like this:
 
