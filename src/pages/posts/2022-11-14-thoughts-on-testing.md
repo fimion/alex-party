@@ -3,8 +3,9 @@ layout: ../../layouts/BlogPost.astro
 title: Thoughts on testing
 pubDate: 2022-11-14T14:33:12.758-00:00
 draft: false
+rssOnly: false
 ---
-Chris Coiyer had an [interesting post](https://chriscoyier.net/2022/11/11/the-difference-between-integration-testing-and-end-to-end-testing/) on integration vs end to end testing. I made a reply that I want to kinda dig into a little bit.
+Chris Coyier had an [interesting post](https://chriscoyier.net/2022/11/11/the-difference-between-integration-testing-and-end-to-end-testing/) on integration vs end to end testing. I made a reply that I want to kinda dig into a little bit.
 
 ## The Testing Pyramid is Weird
 
@@ -22,7 +23,7 @@ A Consumer is anyone who will be using your product as potentially a developer, 
 
 ## User Interface Tests
 
-User tests are often thought of as being only E2E tests, but I disagree. A User test is testing how a user (generally non technical, but sometimes not depending on what you make) will interact with a thing. E2E tests are very helpful here. but also, if you can atomically do unit tests on an interface, do it! same for integration tests. if you click a button and you want to make sure it displays data from an API, maybe you don't need the full app to check that functionality. that can be an integration test! User tests are a touch more fluid in my mind than most people make them out to be. 
+User tests are often thought of as being only E2E tests, but I disagree. A User test is testing how a user (generally non technical, but sometimes not depending on what you make) will interact with a thing. E2E tests are very helpful here. but also, if you can atomically do unit tests on an interface, do it! same for integration tests. if you click a button and you want to make sure it displays data from an API, maybe you don't need the full app to check that functionality. that can be an integration test! User tests are a touch more fluid in my mind than most people make them out to be.
 
 ## That's enough
 
