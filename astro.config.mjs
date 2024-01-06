@@ -18,7 +18,7 @@ export default defineConfig({
   },
   integrations: [mdx(), sitemap(), vue(), react()],
   output: "server",
-  adapter: netlify(),
+  adapter: netlify({}),
   server: {
     host: "0.0.0.0",
   },

@@ -1,8 +1,7 @@
 
 import globalCss from '../../styles/global.css?raw';
-export async function get(){
-  return {
-    body:`<?xml version="1.0" encoding="utf-8"?>
+export async function GET(){
+  return new Response(`<?xml version="1.0" encoding="utf-8"?>
 <!--
 # Pretty Feed
 Styles an RSS/Atom feed, making it friendly for humans viewers, and adds a link
@@ -125,6 +124,5 @@ This file is in BETA. Please test and contribute to the discussion:
     </body>
     </html>
   </xsl:template>
-</xsl:stylesheet>`
-  }
+</xsl:stylesheet>`);
 }
