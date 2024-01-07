@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPost.astro
 title: The LightBox Nerd Snipe
-pubDate: 2024-01-07T17:20:03
+pubDate: 2024-01-07T17:32:34-05:00
 draft: false
 rssOnly: false
 ---
