@@ -88,7 +88,7 @@ const PostPreview = (props) => {
 CMS.registerPreviewStyle(prismStyles.toString(), { raw: true });
 CMS.registerPreviewStyle(
   styles.toString() +
-    `\nbody {background: #000 0 0/200px 200px url("/img/memphis-design.svg");}`,
+    `\nbody {background: #000 0 0/200px 200px var(--bg-img);}`,
   { raw: true }
 );
 
