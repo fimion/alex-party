@@ -4,6 +4,10 @@ title: Art Direction with :has()
 pubDate: 2024-01-18T16:07:05-05:00
 draft: false
 rssOnly: true
+style: |-
+  :is(#\!important, body){
+    --bg-img: url("/img/cassidoo-brain.png");
+  }
 ---
 <div class="cassidoo-brain">
 
