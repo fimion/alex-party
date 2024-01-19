@@ -46,6 +46,7 @@ const PostPreview = (props) => {
   const date = entry?.data?.pubDate;
   const body = entry?.data?.body;
   const style = entry?.data?.style;
+  console.log(style);
   const bodyRendered = customMarkdownIt.render(body || "");
   return (
     <div className="layout">
