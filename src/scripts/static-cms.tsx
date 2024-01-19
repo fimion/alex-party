@@ -140,7 +140,7 @@ CMS.init({
             default: false,
           },
           { label: "Body", name: "body", widget: "markdown" },
-          { label: "Style", name: "style", widget: "code", default:"", default_language:"css"},
+          { label: "Style", name: "style", widget: "code", default:"", default_language:"css", allow_language_selection:true},
         ],
       },
     ],
