@@ -45,6 +45,7 @@ const PostPreview = (props) => {
   const title = entry?.data?.title;
   const date = entry?.data?.pubDate;
   const body = entry?.data?.body;
+  const style = entry?.data?.style;
   const bodyRendered = customMarkdownIt.render(body || "");
   return (
     <div className="layout">
@@ -64,6 +65,7 @@ const PostPreview = (props) => {
         </nav>
       </header>
       <main className="content">
+        {(style && style!=="") && <style>{`@scope{${style}}`}</style>}
         <section>
           <article>
             <h2>
@@ -138,6 +140,7 @@ CMS.init({
             default: false,
           },
           { label: "Body", name: "body", widget: "markdown" },
+          { label: "Style", name: "style", widget: "code", default:"", default_language:"css"},
         ],
       },
     ],

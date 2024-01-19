@@ -10,17 +10,20 @@ export interface Props {
     updatedDate?: string;
     rssOnly?: boolean;
     draft?: boolean;
+    style?: string;
   };
 }
 
 const {
-  content: { title, pubDate, updatedDate, rssOnly, draft },
+  content: { title, pubDate, updatedDate, rssOnly, draft, style },
   url,
   compiledContent,
 } = Astro.props;
 ---
 
 <DefaultLayout title={title} description={compiledContent()}>
+
+  {(style && style!=="") && <style slot="head">{style}</style>}
   <section>
     <article>
       <h2><a href={url}>{title}</a></h2>
