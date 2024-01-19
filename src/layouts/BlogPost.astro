@@ -10,7 +10,7 @@ export interface Props {
     updatedDate?: string;
     rssOnly?: boolean;
     draft?: boolean;
-    style?: string;
+    style?: {code:string;lang:string};
   };
 }
 
@@ -23,7 +23,7 @@ const {
 
 <DefaultLayout title={title} description={compiledContent()}>
 
-  {(style && style!=="") && (<style slot="head" set:html={style} />)}
+  {(style?.code && style?.code!=="") && (<style slot="head" set:html={style?.code} />)}
   <section>
     <article>
       <h2><a href={url}>{title}</a></h2>

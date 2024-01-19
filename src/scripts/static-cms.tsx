@@ -65,7 +65,7 @@ const PostPreview = (props) => {
         </nav>
       </header>
       <main className="content">
-        {(style && style!=="") && <style dangerouslySetInnerHTML={{__html:style}} />}
+        {(style?.code && style?.code!=="") && <style dangerouslySetInnerHTML={{__html:style?.code}} />}
         <section>
           <article>
             <h2>
@@ -140,7 +140,7 @@ CMS.init({
             default: false,
           },
           { label: "Body", name: "body", widget: "markdown" },
-          { label: "Style", name: "style", widget: "code", default:"", default_language:"text/css", allow_language_selection:true},
+          { label: "Style", name: "style", widget: "code", default:{code:"",lang:"css"}, default_language:"css", allow_language_selection:true, output_code_only:false},
         ],
       },
     ],
