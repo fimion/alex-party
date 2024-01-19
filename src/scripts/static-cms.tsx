@@ -65,7 +65,7 @@ const PostPreview = (props) => {
         </nav>
       </header>
       <main className="content">
-        {(style && style!=="") && <style>{`@scope{${style}}`}</style>}
+        {(style && style!=="") && <style>{style}</style>}
         <section>
           <article>
             <h2>
