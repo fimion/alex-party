@@ -34,6 +34,12 @@ I made a little ChatGPT prompt that understands what technology we're using, I t
 
 It's been a mixed success. It's fixed a lot of the pain points we were having. It's saved me time. It helps me get around the thing my brain cannot do.
 
+### More Help
+
+I've also recently started using [brainstory.ai](https://brainstory.ai) to help me think through Ideas. I've used it to help me write some conference abstracts because (once again) my dygraphia won't let me format things in a way others will understand. It lets me talk and kinda word vomit out all my ideas and then help summarize what I've just said.
+
+Another great tool to have in your pocket.
+
 ### A Tale of Two AIs
 
 I cannot say that I fully endorse using LLMs for everyone. You cannot tell ChatGPT to write your essay homework and expect it to be correct. But, maybe it can help you reword that sentence you're messing with to make it be better. Maybe if you struggle communicating your thoughts, it can help you put them out in a useful way.
