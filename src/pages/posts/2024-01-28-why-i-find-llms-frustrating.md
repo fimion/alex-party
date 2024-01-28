@@ -36,7 +36,7 @@ It's been a mixed success. It's fixed a lot of the pain points we were having. I
 
 ### More Help
 
-I've also recently started using [brainstory.ai](https://brainstory.ai) to help me think through Ideas. I've used it to help me write some conference abstracts because (once again) my dygraphia won't let me format things in a way others will understand. It lets me talk and kinda word vomit out all my ideas and then help summarize what I've just said.
+I've also recently started using [brainstory.ai](https://brainstory.ai) to help me think through ideas. I've used it to help me write some conference abstracts because (once again) my dygraphia won't let me format things in a way others will understand. It lets me talk and kinda word vomit out all my ideas and then help summarize what I've just said.
 
 Another great tool to have in your pocket.
 
