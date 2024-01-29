@@ -13,7 +13,7 @@ export const GET = async () => {
 		description: SITE_DESCRIPTION,
 		site: import.meta.env.SITE,
 		stylesheet: '/rss/styles.xsl',
-		items: posts.filter((post) => !post.frontmatter.draft).map((post) => ({
+		items: posts.reverse().filter((post) => !post.frontmatter.draft).map((post) => ({
 			link: post.url,
 			title: post.frontmatter.title,
 			pubDate: post.frontmatter.pubDate,
