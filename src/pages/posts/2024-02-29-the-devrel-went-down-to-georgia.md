@@ -3,7 +3,7 @@ layout: ../../layouts/BlogPost.astro
 title: The DevRel went down to Georgia...
 pubDate: 2024-02-29T17:21:21-05:00
 draft: false
-rssOnly: true
+rssOnly: false
 style: ""
 ---
 Inspiration came from [Stu Robson](https://front-end.social/@sturobson/112014882524066324)
