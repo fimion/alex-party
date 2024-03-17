@@ -4,27 +4,26 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 export interface Props {
-  title: string;
-  description: string;
+    title: string;
+    description: string;
 }
 
-const { title, description } = Astro.props;
-
+const {title, description} = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-    <slot name="head" />
-  </head>
+<head>
+  <BaseHead title={title} description={description}/>
+  <slot name="head"/>
+</head>
 
-  <body>
-    <div class="layout">
-      <Header />
-      <main class="content">
-        <slot />
-      </main>
-      <Footer />
-    </div>
-  </body>
+<body>
+<div class="layout">
+  <Header/>
+  <main class="content">
+    <slot/>
+  </main>
+  <Footer/>
+</div>
+</body>
 </html>
