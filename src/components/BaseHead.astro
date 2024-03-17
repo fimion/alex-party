@@ -11,7 +11,6 @@ export interface Props {
 	description: string;
 
 }
-const publicPath = '../../public';
 const comicNeue = import.meta.glob('../../public/fonts/comic-neue/*.woff2');
 const comicMono = import.meta.glob('../../public/fonts/comic-mono/*.woff2');
 const fonts = [...Object.keys(comicNeue),...Object.keys(comicMono)].map(e=>e.replace('../../public',''));

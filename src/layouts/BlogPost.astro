@@ -2,57 +2,60 @@
 import DefaultLayout from "./DefaultLayout.astro";
 import DateDisplay from "../components/DateDisplay.vue";
 import {type MarkdownInstance} from "astro";
+import {BlogPostOptions} from "../env";
 
-export interface Props extends MarkdownInstance<Record<string, any>>{}
+
+
+export interface Props extends MarkdownInstance<BlogPostOptions> {
+}
 
 const {
-  content: { title, pubDate, updatedDate, rssOnly, draft, style },
-  url,
-  compiledContent,
+    frontmatter: {title, pubDate, updatedDate, rssOnly, draft, style},
+    url,
+    compiledContent,
 } = Astro.props;
 ---
-
 <DefaultLayout title={title} description={compiledContent()}>
-
-  {(style && style!=="") && (<style slot="head" set:html={style} />)}
-      <h2><a href={url}>{title}</a></h2>
-      {
+    {(style && style !== "") && (
+        <style slot="head" set:html={style}/>)}
+  <h2><a href={url}>{title}</a></h2>
+    {
         draft && (
-          <h3 style="color:red">
-            (This is a Draft. Don't share it. Shhhh....)
-          </h3>
+            <h3 style="color:red">
+              (This is a Draft. Don't share it. Shhhh....)
+            </h3>
         )
-      }
-      {pubDate && <DateDisplay datetime={pubDate} />}
-      {
+    }
+    {pubDate &&
+        <DateDisplay datetime={pubDate}/>}
+    {
         updatedDate && (
-          <div>
-            Last updated on <DateDisplay datetime={updatedDate} />
-          </div>
+            <div>
+              Last updated on
+              <DateDisplay datetime={updatedDate}/>
+            </div>
         )
-      }
-      {
+    }
+    {
         rssOnly && (
-          <p class="rss-club">
-            This post is a secret!
-            <a href="https://daverupert.com/rss-club/" target="_blank">
-              Read more about RSS Club.
-            </a>
-          </p>
+            <p class="rss-club">
+              This post is a secret!
+              <a href="https://daverupert.com/rss-club/" target="_blank">
+                Read more about RSS Club.
+              </a>
+            </p>
         )
-      }
-    <slot />
-    <div class="sans-serif">
-      <script
-        is:inline
-        src="https://utteranc.es/client.js"
-        repo="fimion/alex-party"
-        issue-term="pathname"
-        label="comments"
-        theme="github-light"
-        crossorigin="anonymous"
-        async="async"></script>
-    </div>
+    }
+  <slot/>
+  <script
+      is:inline
+      src="https://utteranc.es/client.js"
+      repo="fimion/alex-party"
+      issue-term="pathname"
+      label="comments"
+      theme="github-light"
+      crossorigin="anonymous"
+      async="async"></script>
 </DefaultLayout>
 <style>
   .rss-club {

@@ -170,9 +170,9 @@ I was hungry so I started to go make lunch. My brain however started to do loop-
 
 Fine, brain. Let's go.
 
-### SharedContext - Galaxy Brain Mode
-
 Let's start with the generic thing we can use to make this better.
+
+### SharedContext - Galaxy Brain Mode
 
 ```js
 // shared-context.js

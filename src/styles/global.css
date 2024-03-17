@@ -208,13 +208,76 @@ body:has(.cassidoo-brain){
 }
 
 .layout {
-	max-width: 80ch;
-	margin: 0 auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	--gap: clamp(1rem, 6vw, 3rem);
+	--full: minmax(var(--gap), 1fr);
+	--content: min(60ch, 100% - var(--gap) * 2);
+	--popout: minmax(0, 2rem);
+	--feature: minmax(0, 5rem);
+
+	display: grid;
+	grid-template-columns:
+    [full-start] var(--full)
+    [feature-start] var(--feature)
+    [popout-start] var(--popout)
+    [content-start] var(--content) [content-end]
+    var(--popout) [popout-end]
+    var(--feature) [feature-end]
+    var(--full) [full-end];
+}
+.layout > * {
+	grid-column: full;
+}
+.popout {
+	grid-column: popout;
+}
+.feature {
+	grid-column: feature;
+}
+.full {
+	grid-column: full;
+}
+
+main {
+	grid-column: full;
+	display:grid;
+	grid-template-columns: subgrid;
+	--main-border: 0.4rem ridge var(--c-highlight-paper);
+	--main-border-radius: 0.5rem;
+}
+main > *:not(.popout,.full, .feature, blockquote,code,pre,iframe) {
+	grid-column: content;
+	margin: 0;
+	padding-inline: 1rem;
+	background-color: var(--c-paper);
+	border-inline: var(--main-border);
+}
+
+main > *:first-child,
+main > :where(.popout,.full, .feature, blockquote,code,pre,iframe)+*:not(.popout,.full, .feature, blockquote,code,pre,iframe){
+	margin-block-start: 0.5rem;
+	background-color: var(--c-paper);
+	padding-block: 0.25rem;
+	border-start-start-radius:var(--main-border-radius);
+	border-start-end-radius:var(--main-border-radius);
+	border-block-start: var(--main-border);
+}
+main > *:last-child,
+main > *:has(+ :is(.popout,.full, .feature, blockquote,code,pre,iframe)),
+main > *:has(+ :is(h2,h3,h4,h5,h6) + pre[class*=language-])
+{
+	border-end-start-radius:var(--main-border-radius);
+	border-end-end-radius:var(--main-border-radius);
+	border-block-end: var(--main-border);
+	margin-block-end: 0.25rem;
+}
+iframe{
+	grid-column: feature;
+	min-height: 500px;
+	width: 100%;
 }
 
 .header,.footer {
+	grid-column: content;
 	text-align: center;
 	margin: 1rem 0;
 	border-radius: 0.5rem;
@@ -285,9 +348,37 @@ code {
 	padding-inline: 0.1rem;
 }
 
+main > pre[class*=language-]{
+	grid-column: feature;
+	border-radius: var(--main-border-radius);
+	border: var(--main-border);
+	margin-block-start: 0;
+}
+
+:root main > :is(h2,h3,h4,h5,h6):has(+ pre[class*=language-]){
+	grid-column: feature;
+	background-color: #2d2d2d;
+	color: #ccc;
+	margin-block-end: 0;
+	margin-block-start: 0.5rem;
+	border-block-end: 0;
+	border-radius: 0;
+	border-block-start: var(--main-border);
+	border-start-start-radius: var(--main-border-radius);
+	border-start-end-radius: var(--main-border-radius);
+}
+:root main > :is(h2,h3,h4,h5,h6)+ pre[class*=language-]{
+	border-start-start-radius: 0;
+	border-start-end-radius: 0;
+	border-block-start: 0;
+}
+
 :root:root:root :is(code[class*=language-],
 pre[class*=language-]) {
 	font-family: var(--ff-mono);
+	white-space: pre-wrap;
+	overflow: auto;
+	word-break: break-word
 }
 
 .nav__link:not(:first-child) {
@@ -307,7 +398,7 @@ pre[class*=language-]) {
 	color: var(--c-highlight-ink);
 }
 
-.content {
+.other {
 	background-color: var(--c-paper);
 	padding: 0.25rem 1rem;
 	border-radius: 0.5rem;
@@ -324,6 +415,7 @@ hr {
 }
 
 blockquote{
+	grid-column: popout;
 	--c-inset-paper: var(--c-highlight-paper);
 	--c-inset-border: color-mix(in srgb, var(--c-highlight-paper) 80%, var(--c-ink));
 	--c-inset-ink: var(--c-highlight-ink);

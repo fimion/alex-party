@@ -16,13 +16,9 @@ Anyway, I made my own version.
 
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="light-box" src="https://codepen.io/fimion/embed/GReZMMx?default-tab=html%2Cresult&theme-id=39521" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
-
   See the Pen <a href="https://codepen.io/fimion/pen/GReZMMx">
-
   light-box</a> by Alex Riviere (<a href="https://codepen.io/fimion">@fimion</a>)
-
   on <a href="https://codepen.io">CodePen</a>.
-
 </iframe>
 
 
@@ -30,8 +26,6 @@ Anyway, I made my own version.
 
 
 This version is a bit more forgiving than Raymond's. It looks for any link with an image inside of it. Which makes it easier to use it with a list, or whatever nested structure you want. It also allows for multiple images and then will give you previous and next buttons based on what is there, but will limit itself to the contents of the current light-box.
-
-
 
 
 
