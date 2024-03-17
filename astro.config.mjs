@@ -7,17 +7,16 @@ import vue from "@astrojs/vue";
 import react from "@astrojs/react";
 
 // https://astro.build/config
-import netlify from "@astrojs/netlify/functions";
+import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://alex.party",
   markdown: {
     syntaxHighlight: "prism",
-    drafts: true,
   },
   integrations: [mdx(), sitemap(), vue(), react()],
-  output: "server",
+  output: "hybrid",
   adapter: netlify({}),
   server: {
     host: "0.0.0.0",
