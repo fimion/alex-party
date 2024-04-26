@@ -248,6 +248,7 @@ main > *:not(.popout,.full, .feature, blockquote,code,pre,iframe) {
 	grid-column: content;
 	margin: 0;
 	padding-inline: 1rem;
+	padding-block-end: 1rem;
 	background-color: var(--c-paper);
 	border-inline: var(--main-border);
 }
