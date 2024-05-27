@@ -14,10 +14,6 @@ We recently rewrote pagination at work, and I decided  this is an excellent use 
 
 Our “Big” mode is when you have multiple page links (think like 10+) and you want to have the pattern display each page link. We use a list of links and also need a “previous” and “next” button at the end. The “Little” mode is what you might think of as “mobile mode" where rather than a list of links, we use a form that has a drop down with the page options. This isn't just for mobile but can also be used for small paginated lists.
 
-
-
-
-
 ## CSS Example
 
 ```css
@@ -62,14 +58,12 @@ Our “Big” mode is when you have multiple page links (think like 10+) and you
 
 ## Codepen Demo
 
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="WNBoQdJ" data-pen-title="Untitled" data-user="fimion" style="height: 600px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/fimion/embed/WNBoQdJ?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
 
-  <span>See the Pen <a href="https://codepen.io/fimion/pen/WNBoQdJ">
+  See the Pen <a href="https://codepen.io/fimion/pen/WNBoQdJ">
 
   Untitled</a> by Alex Riviere (<a href="https://codepen.io/fimion">@fimion</a>)
 
-  on <a href="https://codepen.io">CodePen</a>.</span>
+  on <a href="https://codepen.io">CodePen</a>.
 
-</p>
-
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</iframe>
