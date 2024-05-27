@@ -60,10 +60,4 @@ Our “Big” mode is when you have multiple page links (think like 10+) and you
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="Untitled" src="https://codepen.io/fimion/embed/WNBoQdJ?default-tab=result&theme-id=39521" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
 
-  See the Pen <a href="https://codepen.io/fimion/pen/WNBoQdJ">
-
-  Untitled</a> by Alex Riviere (<a href="https://codepen.io/fimion">@fimion</a>)
-
-  on <a href="https://codepen.io">CodePen</a>.
-
 </iframe>
