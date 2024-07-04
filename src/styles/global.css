@@ -306,7 +306,7 @@ iframe{
 	border: 0.4rem ridge var(--c-highlight-ink);
 
 	.webring{
-		--c-border: hotpink;
+		--c-border: rgb(255, 103, 255);
 		border-radius: var(--br-outer);
 		border: 0.2rem outset var(--c-border);
 		background-color: var(--c-paper);
