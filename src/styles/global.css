@@ -291,7 +291,7 @@ iframe{
 .webrings{
 
 	--br-outer: 0.5rem;
-	--br-inner: 0.4rem;
+	--br-inner: 0.3rem;
 
 	grid-column: content;
 	display:grid;
@@ -306,8 +306,9 @@ iframe{
 	border: 0.4rem ridge var(--c-highlight-ink);
 
 	.webring{
+		--c-border: hotpink;
 		border-radius: var(--br-outer);
-		border: 0.2rem outset var(--c-paper);
+		border: 0.2rem outset var(--c-border);
 		background-color: var(--c-paper);
 		color: var(--c-ink);
 
@@ -342,7 +343,7 @@ iframe{
 		}
 
 		p,a{
-			border: 0.2rem inset var(--c-paper);
+			border: 0.2rem inset var(--c-border);
 			padding: 0.1em;
 			margin:0;
 			flex:1;
