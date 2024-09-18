@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPost.astro
 title: I Am Adequate, But Sometimes I Don't Have The Tools
 pubDate: 2024-09-18T16:35:57
-draft: true
+draft: false
 rssOnly: true
 style: ""
 ---
