@@ -2,7 +2,7 @@
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import BlogList from "../components/BlogList.vue";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-const posts = (await Astro.glob("./posts/*.md")).sort(
+const posts = Object.values(import.meta.glob('./posts/**/*.{md,mdx}', { eager: true })).sort(
   (a, b) =>
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()

@@ -16,7 +16,7 @@ export default defineConfig({
     syntaxHighlight: "prism",
   },
   integrations: [mdx(), sitemap(), vue(), react()],
-  output: "hybrid",
+  output: "static",
   adapter: netlify({}),
   server: {
     host: "0.0.0.0",

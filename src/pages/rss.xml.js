@@ -3,11 +3,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import sanitizeHtml from 'sanitize-html';
 
 const postImportResult = import.meta.glob('./posts/**/*.{md,mdx}', { eager: true });
-const posts = Object.values(postImportResult).reverse().filter((post) => !post.frontmatter.draft).map((post) => ({
+const posts = Object.values(postImportResult).reverse().filter((post) => !post.frontmatter.draft).map(async (post) => ({
 	link: post.url,
 	title: post.frontmatter.title,
 	pubDate: post.frontmatter.pubDate,
-	content: sanitizeHtml(post.compiledContent()),
+	content: sanitizeHtml(await post.compiledContent()),
 }));
 
 
@@ -18,7 +18,7 @@ export const GET = async () => {
 		description: SITE_DESCRIPTION,
 		site: import.meta.env.SITE,
 		stylesheet: '/rss/styles.xsl',
-		items: posts,
+		items: await Promise.all(posts),
 	});
 	rssResponse.headers.delete('Content-Type');
 	rssResponse.headers.set('Content-Type', 'text/xml; charset=utf-8');

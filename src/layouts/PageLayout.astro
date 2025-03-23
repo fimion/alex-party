@@ -10,7 +10,7 @@ url, compiledContent
 } = Astro.props;
 ---
 
-<DefaultLayout title={title} description={compiledContent()}>
+<DefaultLayout title={title} description={await compiledContent()}>
       <section>
 			<article>
         <h2><a href={ errorPage ? "/" : url}>{ title }</a></h2>

@@ -2,7 +2,7 @@
 import DefaultLayout from "./DefaultLayout.astro";
 import DateDisplay from "../components/DateDisplay.vue";
 import {type MarkdownInstance} from "astro";
-import {BlogPostOptions} from "../env";
+import {type BlogPostOptions} from "../env";
 
 
 
@@ -15,7 +15,7 @@ const {
     compiledContent,
 } = Astro.props;
 ---
-<DefaultLayout title={title} description={compiledContent()}>
+<DefaultLayout title={title} description={await compiledContent()}>
     {(style && style !== "") && (
         <style slot="head" set:html={style}/>)}
   <h2><a href={url}>{title}</a></h2>

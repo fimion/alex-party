@@ -1,6 +1,7 @@
 <script>
 import DateDisplay from "./DateDisplay.vue"
 import splitExcerpt from "../functions/splitExcerpt.js"
+import {reactive} from "vue"
 
 export default {
   metaInfo: {
@@ -12,7 +13,12 @@ export default {
     },
   },
   async setup(props) {
-    return {splitExcerpt}
+    const previews = reactive({});
+    for(let post of props.posts){
+      previews[post.url] = splitExcerpt(await post.compiledContent())
+    }
+
+    return {previews}
   },
   components: {DateDisplay},
 }
@@ -27,7 +33,7 @@ export default {
       <date-display :datetime="post.frontmatter.pubDate"/>
     </p>
     <div class="sans-serif">
-      <div v-html="splitExcerpt(post.compiledContent())"></div>
+      <div v-html="previews[post.url]"></div>
       <p><a :href="post.url">Continue reading "{{ post.frontmatter.title }}"</a></p>
     </div>
   </article>
