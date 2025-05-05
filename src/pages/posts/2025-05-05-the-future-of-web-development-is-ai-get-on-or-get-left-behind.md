@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPost.astro
 title: The future of web development is AI. Get on or get left behind.
 pubDate: 2025-05-05T07:58:24
-draft: true
+draft: false
 rssOnly: false
 style: ""
 ---
