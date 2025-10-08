@@ -2,7 +2,7 @@
 layout: ../../layouts/BlogPost.astro
 title: 'Junior Dev Tip: "Scroll Up"'
 pubDate: 2025-10-08T16:28:48
-draft: true
+draft: false
 rssOnly: false
 style: ""
 ---
