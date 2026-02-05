@@ -14,23 +14,15 @@
   "dependencies": {
     "@astrojs/mdx": "^4.2.1",
     "@astrojs/netlify": "^6.2.3",
-    "@astrojs/react": "^4.2.1",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.3.0",
     "@astrojs/vue": "^5.0.7",
     "@staticcms/core": "^4.3.0",
-    "astro": "^5.5.4",
+    "astro": "^5.17.1",
     "htm": "^3.1.1",
     "lodash-es": "^4.17.21",
-    "markdown-it": "^14.0.0",
     "prismjs": "^1.29.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "sanitize-html": "^2.12.1",
     "vue": "^3.5.13"
-  },
-  "devDependencies": {
-    "@types/markdown-it": "^13.0.7",
-    "@types/prismjs": "^1.26.3"
   }
 }

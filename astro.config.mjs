@@ -4,8 +4,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 import vue from "@astrojs/vue";
-import react from "@astrojs/react";
-
 // https://astro.build/config
 import netlify from "@astrojs/netlify";
 
@@ -15,7 +13,7 @@ export default defineConfig({
   markdown: {
     syntaxHighlight: "prism",
   },
-  integrations: [mdx(), sitemap(), vue(), react()],
+  integrations: [mdx(), sitemap(), vue()],
   output: "static",
   adapter: netlify({}),
   server: {

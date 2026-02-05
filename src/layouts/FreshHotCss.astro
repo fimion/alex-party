@@ -1,0 +1,16 @@
+---
+import type {MarkdownInstance} from "astro";
+import type {BlogPostOptions} from "../env";
+import BlogPost from "./BlogPost.astro";
+export interface Props extends MarkdownInstance<BlogPostOptions> {
+}
+
+const props = Astro.props
+
+import FreshHotCssAside from "../components/FreshHotCssAside.astro";
+
+---
+<BlogPost {...props}>
+  <FreshHotCssAside />
+  <slot />
+</BlogPost>

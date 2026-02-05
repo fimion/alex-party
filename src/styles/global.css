@@ -332,9 +332,9 @@ iframe{
 
 			}
 
-			
+
 		}
-		
+
 
 
 		& >*:first-child{
@@ -490,4 +490,12 @@ blockquote{
 	font-size: 1.3rem;
 	padding-inline: 2ch;
 	margin-inline: 0;
+}
+
+aside p{
+	background-color: lightskyblue;
+	color: black;
+	border-radius: 0.5rem;
+	border: 3px ridge dodgerblue;
+	padding: 0.5rem;
 }

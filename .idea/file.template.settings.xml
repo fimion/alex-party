@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExportableFileTemplateSettings">
+    <default_templates>
+      <template name="Blog Post.md" file-name="${YEAR}-${MONTH}-${DAY}-$Post_Title.toLowerCase().replaceAll(&quot;[^a-z\- ]&quot;, &quot;&quot;).replaceAll(&quot; &quot;,&quot;-&quot;)" reformat="true" live-template-enabled="false" />
+    </default_templates>
+  </component>
+</project>
