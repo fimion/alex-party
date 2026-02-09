@@ -1,27 +1,19 @@
-<template>
-  <time :datetime="datetime">{{displayDatetime}}</time>
-</template>
-
-<script>
-export default {
-name: "DateDisplay",
-  props:{
-    datetime:{
-      type: String,
-      required: true,
-    }
-  },
-  computed:{
-    dateObject(){
-      return new Date(this.datetime);
-    },
-    displayDatetime(){
-      return new Intl.DateTimeFormat().format(this.dateObject);
-    }
-  },
+<script setup lang="ts">
+import {computed, defineOptions, defineProps} from "vue";
+defineOptions({
+  name: "DateDisplay",
+})
+interface Props {
+  datetime: string|Date;
 }
-</script>
+const props = defineProps<Props>()
 
+const dateObject = computed(()=>new Date(props.datetime))
+const displayDatetime = new Intl.DateTimeFormat().format(dateObject.value)
+</script>
+<template>
+  <span :datetime="dateObject.toISOString()">{{displayDatetime}}</span>
+</template>
 <style scoped>
 
 </style>
