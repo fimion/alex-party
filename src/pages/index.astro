@@ -1,12 +1,13 @@
 ---
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 import BlogList from "../components/BlogList.vue";
+import {getCollection} from "astro:content";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-const posts = Object.values(import.meta.glob('./posts/**/*.{md,mdx}', { eager: true })).sort(
+const posts = (await getCollection("posts")).sort(
   (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
-).filter((post) => !post.frontmatter.draft && !post.frontmatter.rssOnly);
+    new Date(b.data.pubDate).valueOf() -
+    new Date(a.data.pubDate).valueOf()
+).filter((post) => !post.data.draft && !post.data.rssOnly);
 ---
 
 <DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>

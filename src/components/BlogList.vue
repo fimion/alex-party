@@ -1,40 +1,38 @@
-<script>
+<script setup lang="ts">
 import DateDisplay from "./DateDisplay.vue"
 import splitExcerpt from "../functions/splitExcerpt.js"
 import {reactive} from "vue"
+import {type CollectionEntry, render, } from "astro:content";
 
-export default {
-  metaInfo: {
+defineOptions({
+  metaInfo:{
     title: "Alex.party",
   },
-  props: {
-    posts: {
-      type: Array,
-    },
-  },
-  async setup(props) {
-    const previews = reactive({});
-    for(let post of props.posts){
-      previews[post.url] = splitExcerpt(await post.compiledContent())
-    }
-
-    return {previews}
-  },
-  components: {DateDisplay},
+});
+interface Props {
+  posts: CollectionEntry<"posts">[];
 }
+
+const props = defineProps<Props>();
+
+const previews = reactive({});
+for(let post of props.posts){
+    previews[post.id] = splitExcerpt(post.rendered?.html ?? "")
+}
+
 </script>
 <template>
 
   <article v-for="post in posts" :key="post.id" class="article">
     <h2>
-      <a :href="post.url">{{ post.frontmatter.title }}</a>
+      <a :href="'/posts/'+post.id">{{ post.data.title }}</a>
     </h2>
     <p>
-      <date-display :datetime="post.frontmatter.pubDate"/>
+      <date-display :datetime="post.data.pubDate.toISOString()" />
     </p>
     <div class="sans-serif">
-      <div v-html="previews[post.url]"></div>
-      <p><a :href="post.url">Continue reading "{{ post.frontmatter.title }}"</a></p>
+      <div v-html="previews[post.id]"></div>
+      <p><a :href="'/posts/'+post.id">Continue reading "{{ post.data.title }}"</a></p>
     </div>
   </article>
 
