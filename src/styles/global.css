@@ -277,9 +277,12 @@ main > *:has(+ :is(h2,h3,h4,h5,h6) + pre[class*=language-])
 }
 iframe{
 	grid-column: feature;
-	min-height: 500px;
 	width: 100%;
 	background-color: var(--c-paper);
+
+	&:not(.utterances-frame){
+		min-height: 500px;
+	}
 }
 
 .header,.footer {
