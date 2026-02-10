@@ -1,0 +1,26 @@
+---
+import {getCollection} from "astro:content";
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+const posts = (await getCollection("posts")).filter((post) => !post.data.draft && !post.data.rssOnly && post.data.layout.includes("FreshHotCss"))
+    .sort(
+        (a, b) =>
+            new Date(b.data.pubDate).valueOf() -
+            new Date(a.data.pubDate).valueOf()
+    );
+---
+<DefaultLayout description={`This is an ongoing series of blog posts based on a talk I have been giving since January 2023 called 'Fresh Hot CSS Features!'`} title="Fresh Hot CSS Features!">
+<h1>Fresh Hot CSS Features!</h1>
+
+<p>
+  This is an ongoing series of blog posts based on a talk I have been giving since January 2023 called
+  <strong>"Fresh Hot CSS Features!"</strong> and over time, newer and newer CSS features come out and I cannot
+  include all of them in the time allotted so they get moved past the end of the talk. I always have extra content at the
+  end but usually there's just not enough time to get to it. This series is all of the things that have been retired from the talk, too far past the end slide for me to actually be
+  able to get to them today.
+</p>
+
+<ul>
+  {posts.map((el)=><li><a href={'/posts/'+el.id}>{el.data.title}</a></li>)}
+</ul>
+
+</DefaultLayout>
