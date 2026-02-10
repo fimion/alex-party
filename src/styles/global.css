@@ -253,6 +253,10 @@ main > *:not(.popout,.full, .feature, blockquote,code,pre,iframe) {
 	border-inline: var(--main-border);
 }
 
+main > :is(.list, ul, ol, dl) {
+	padding-inline-start: 3.5rem;
+}
+
 main > *:first-child,
 main > :where(.popout,.full, .feature, blockquote,code,pre,iframe)+*:not(.popout,.full, .feature, blockquote,code,pre,iframe){
 	margin-block-start: 0.5rem;
@@ -275,6 +279,7 @@ iframe{
 	grid-column: feature;
 	min-height: 500px;
 	width: 100%;
+	background-color: var(--c-paper);
 }
 
 .header,.footer {
