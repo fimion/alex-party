@@ -20,6 +20,7 @@ const posts = (await getCollection("posts")).filter((post) => !post.data.draft &
 </p>
 
 <ul>
+  <li><a href="https://slides.com/fimion/decks/fresh-hot-css" target="_blank">"Fresh Hot CSS Features!" - Slides.com</a></li>
   {posts.map((el)=><li><a href={'/posts/'+el.id}>{el.data.title}</a></li>)}
 </ul>
 
